@@ -1,6 +1,6 @@
 {
- "updated": "2026-09-05",
- "day": 9,
+ "updated": "2026-09-06",
+ "day": 10,
  "start": "2026-08-28",
  "videos": [
   {
@@ -10,8 +10,8 @@
    "yt": "nQCtZai66jA",
    "title": "作った会社が分からないAIが、世界最強を抜いた",
    "blurb": "ベンチマークで首位に立ったのに、出どころが分からなかった。",
-   "hours": 185,
-   "rate": 1.5,
+   "hours": 198,
+   "rate": 1.4,
    "voice": "合成音声",
    "tt": 0,
    "ig": 121
@@ -23,8 +23,8 @@
    "yt": "pO4CNBgSVFU",
    "title": "OpenAIが「半導体メーカー」になった理由",
    "blurb": "GPUを買う側から、作る側へ。理由はコスト。",
-   "hours": 168,
-   "rate": 1.5,
+   "hours": 181,
+   "rate": 1.4,
    "voice": "合成音声",
    "tt": 0,
    "ig": 7
@@ -36,8 +36,8 @@
    "yt": "SJaMmQna1Dk",
    "title": "2.4兆パラメータのAIが、無料で公開された",
    "blurb": "パラメータ数は過去最大級。それが無料で使える。",
-   "hours": 144,
-   "rate": 3.1,
+   "hours": 157,
+   "rate": 2.9,
    "voice": "合成音声",
    "tt": 102,
    "ig": 42
@@ -49,8 +49,8 @@
    "yt": "FsPfK9KDMPk",
    "title": "性能は上がって、値段は半分になったAI",
    "blurb": "性能は上がって、値段は半分。AIの価格競争。",
-   "hours": 108,
-   "rate": 10.6,
+   "hours": 122,
+   "rate": 9.4,
    "voice": "合成音声",
    "tt": 106,
    "ig": 7
@@ -62,8 +62,8 @@
    "yt": "Pdbdtd7zt1A",
    "title": "AIたちは裏で相談していた",
    "blurb": "複数のAIが、人に見えないところで互いに相談していた。",
-   "hours": 97,
-   "rate": 11.5,
+   "hours": 110,
+   "rate": 10.1,
    "voice": "合成音声",
    "tt": 144,
    "ig": 3
@@ -75,8 +75,8 @@
    "yt": "pgzlddA6DjA",
    "title": "推しがAIだった",
    "blurb": "Instagramが「AI生成」ラベルを義務化。推しが実在しない時代。",
-   "hours": 58,
-   "rate": 7.8,
+   "hours": 71,
+   "rate": 6.4,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -88,8 +88,8 @@
    "yt": "aJDvh6BgOFw",
    "title": "なんで通じないの",
    "blurb": "AIに小分けで頼むと成績が39%落ちる。まとめて頼むのが正解。",
-   "hours": 72,
-   "rate": 14.8,
+   "hours": 86,
+   "rate": 12.5,
    "voice": "合成音声",
    "tt": 96,
    "ig": 7
@@ -101,8 +101,8 @@
    "yt": "mB3Gd31iMTc",
    "title": "撮られてるかも",
    "blurb": "メタのスマートグラスで無断撮影された動画が、消すと言われて1か月経っても残っている。",
-   "hours": 50,
-   "rate": 19.3,
+   "hours": 63,
+   "rate": 15.3,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -110,12 +110,12 @@
   {
    "id": "SK012",
    "date": "2026-09-03",
-   "views": 977,
+   "views": 978,
    "yt": "Rz1dbdTJ0Wk",
    "title": "宿題はしてない",
    "blurb": "日本の高校生の88.4%がAIを使う。でも宿題の代行に使うのは10.3%だけ。",
-   "hours": 34,
-   "rate": 28.6,
+   "hours": 47,
+   "rate": 20.6,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -127,8 +127,8 @@
    "yt": "z90GcfcURyU",
    "title": "もう消せない",
    "blurb": "AIが書いた文章に、見えないマークが入りはじめた。コピーしても消えない。",
-   "hours": 25,
-   "rate": 36.2,
+   "hours": 38,
+   "rate": 23.6,
    "voice": "合成音声",
    "tt": 0,
    "ig": 0
@@ -136,27 +136,27 @@
   {
    "id": "SK014",
    "date": "2026-09-04",
-   "views": 1041,
+   "views": 1306,
    "yt": "67s4Ip8sUEU",
    "title": "言う通りに行ったら",
    "blurb": "AIの言うとおりに登山して遭難。水も食料も足りなかった。",
-   "hours": 13,
-   "rate": 80.7,
+   "hours": 26,
+   "rate": 50.0,
    "voice": "生声",
    "tt": 0,
    "ig": 0
   }
  ],
  "posted": 11,
- "total_views": 8649,
- "subs": 3,
+ "total_views": 8915,
+ "subs": 4,
  "subs_goal": 1000,
- "decisions": 326,
- "stumbles": 60,
+ "decisions": 340,
+ "stumbles": 61,
  "orders": 0,
  "applied": 0,
  "platforms": {
-  "youtube": 8649,
+  "youtube": 8915,
   "tiktok": 448,
   "instagram": 187,
   "threads": null,
@@ -168,7 +168,7 @@
   {
    "from": "おすすめ（ショートフィード）",
    "to": "YouTube",
-   "v": 5397
+   "v": 5393
   },
   {
    "from": "YouTube内の他ページ",
@@ -178,7 +178,7 @@
   {
    "from": "検索",
    "to": "YouTube",
-   "v": 69
+   "v": 70
   },
   {
    "from": "登録者",
