@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ja" data-lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Snapknow — 利用規約">
+<meta property="og:title" content="Snapknow">
+<meta property="og:description" content="AIの「いま」を、30秒で。">
+<meta property="og:type" content="website">
+<title>利用規約｜Snapknow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
+
+<style>
+:root{
+  --ground:#F2F1EC;
+  --raised:#F7F6F2;
+  --ink:#0B1220;
+  --muted:#6D6A62;
+  --line:#D8D5CC;
+  --bar:#0B1220;
+  --bar-ink:#FFD133;
+  --bar-ink-soft:#F0EFEA;
+  --focus:#0B63C5;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B1220;
+    --raised:#18203A;
+    --ink:#EFEEE9;
+    --muted:#9A968D;
+    --line:#26304C;
+    --bar:#FFD133;
+    --bar-ink:#0B1220;
+    --bar-ink-soft:#0B1220;
+    --focus:#7FB2FF;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1220;
+  --raised:#18203A;
+  --ink:#EFEEE9;
+  --muted:#9A968D;
+  --line:#26304C;
+  --bar:#FFD133;
+  --bar-ink:#0B1220;
+  --bar-ink-soft:#0B1220;
+  --focus:#7FB2FF;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",system-ui,sans-serif;
+  font-weight:400;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:34rem;margin:0 auto;padding:2rem 1.25rem 4rem;display:flex;flex-direction:column;gap:2.25rem}
+
+/* --- language switch --- */
+.langbar{display:flex;justify-content:flex-end;gap:.375rem}
+.langbar button{
+  font-family:Archivo,system-ui,sans-serif;font-weight:600;font-size:.6875rem;
+  letter-spacing:.09em;text-transform:uppercase;
+  padding:.3rem .55rem;border:1px solid var(--line);border-radius:999px;
+  background:transparent;color:var(--muted);cursor:pointer;line-height:1;
+}
+.langbar button[aria-pressed="true"]{background:var(--bar);color:var(--bar-ink-soft);border-color:var(--bar)}
+.langbar button:focus-visible,a:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+
+/* --- masthead --- */
+.mast{display:flex;flex-direction:column;gap:.5rem}
+.brand{
+  font-weight:900;font-size:clamp(2.25rem,11vw,3rem);line-height:.95;
+  letter-spacing:-.035em;margin:0;text-wrap:balance;
+}
+.tag{font-size:.9375rem;color:var(--muted);margin:0}
+
+/* --- the subtitle bar: the page's structural device.
+       Snapknow burns its captions straight onto the video; section
+       labels here use that same block. --- */
+.bar{
+  display:inline-block;background:var(--bar);color:var(--bar-ink);
+  font-weight:900;font-size:.8125rem;letter-spacing:.02em;
+  padding:.28rem .6rem;line-height:1.35;
+}
+.bar--note{color:var(--bar-ink-soft);font-weight:700}
+
+section{display:flex;flex-direction:column;gap:.875rem}
+
+/* --- disclosure --- */
+.pr{display:flex;flex-direction:column;gap:.5rem}
+.pr p{margin:0;font-size:.8125rem;color:var(--muted)}
+
+/* --- tool card --- */
+.card{
+  background:var(--raised);border:1px solid var(--line);
+  padding:1.25rem;display:flex;flex-direction:column;gap:.75rem;
+}
+.card h3{margin:0;font-size:1.0625rem;font-weight:700;line-height:1.45}
+.card p{margin:0;font-size:.875rem;color:var(--muted)}
+.cta{
+  align-self:flex-start;background:var(--bar);color:var(--bar-ink);
+  font-weight:900;font-size:.9375rem;text-decoration:none;
+  padding:.6rem 1.1rem;line-height:1.4;
+}
+.cta:hover{opacity:.85}
+
+/* --- follow --- */
+.follow{display:flex;flex-direction:column;gap:.5rem}
+.follow a{
+  display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+  padding:.8rem 0;border-bottom:1px solid var(--line);
+  text-decoration:none;color:var(--ink);font-weight:500;
+}
+.follow a:first-of-type{border-top:1px solid var(--line)}
+.follow a:hover .handle{color:var(--ink)}
+.plat{font-family:Archivo,system-ui,sans-serif;font-weight:700;font-size:.9375rem;letter-spacing:.01em}
+.handle{font-family:Archivo,system-ui,sans-serif;font-size:.8125rem;color:var(--muted)}
+
+/* --- about --- */
+.about p{margin:0 0 .5rem;font-size:.875rem;color:var(--muted)}
+.about p:last-child{margin-bottom:0}
+
+/* --- language visibility --- */
+[data-lang="ja"] [data-l]:not([data-l="ja"]),
+[data-lang="en"] [data-l]:not([data-l="en"]),
+[data-lang="es"] [data-l]:not([data-l="es"]){display:none}
+
+@media (prefers-reduced-motion:no-preference){
+  .wrap>*{animation:rise .5s cubic-bezier(.22,.7,.3,1) both}
+  .wrap>*:nth-child(2){animation-delay:.05s}
+  .wrap>*:nth-child(3){animation-delay:.1s}
+  .wrap>*:nth-child(4){animation-delay:.15s}
+  .wrap>*:nth-child(5){animation-delay:.2s}
+  .wrap>*:nth-child(6){animation-delay:.25s}
+  @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+}
+</style>
+<style>
+/* --- 規約ページ用の追加（本文が長いので読みやすさを足す） --- */
+.wrap.doc{max-width:42rem}
+.doc h2{font-size:1.0625rem;font-weight:900;margin:2rem 0 .5rem;line-height:1.45}
+.doc h2:first-of-type{margin-top:0}
+.doc h3{font-size:.9375rem;font-weight:700;margin:1.25rem 0 .35rem;color:var(--ink)}
+.doc p,.doc li{font-size:.875rem;color:var(--muted);margin:0 0 .6rem}
+.doc li{margin-bottom:.35rem}
+.doc ul{margin:0 0 .8rem;padding-left:1.15rem}
+.doc strong{color:var(--ink);font-weight:700}
+.doc a{color:var(--ink)}
+.updated{font-family:Archivo,system-ui,sans-serif;font-size:.75rem;color:var(--muted);letter-spacing:.02em}
+.back{display:inline-block;margin-top:2.5rem;font-weight:700;font-size:.875rem;
+  text-decoration:none;color:var(--ink);border-bottom:2px solid var(--bar-ink)}
+.doc hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0}
+</style>
+
+<div class="wrap doc">
+
+  <header class="mast">
+    <h1 class="brand" style="font-size:clamp(1.75rem,7vw,2.25rem)">利用規約</h1>
+    <p class="updated">SNAPKNOW ／ 最終更新 2026-08-29</p>
+  </header>
+
+  <section>
+    <span class="bar">1. 適用</span>
+    <p>本規約は、Snapknow（以下「当方」）が提供するウェブページおよび
+    各動画プラットフォーム上のコンテンツの利用条件を定めるものです。
+    ご利用いただいた時点で、本規約に同意したものとみなします。</p>
+  </section>
+
+  <section>
+    <span class="bar">2. コンテンツの性質</span>
+    <p>当方が公開する動画および記事は、<strong>AI・テクノロジーに関する情報提供を目的としたもの</strong>です。
+    正確性には努めますが、内容の完全性・最新性・特定の目的への適合性を保証するものではありません。</p>
+    <p>特に、<strong>投資・法務・税務・医療に関する助言ではありません。</strong>
+    これらの判断は、それぞれの専門家にご相談ください。</p>
+  </section>
+
+  <section>
+    <span class="bar">3. アフィリエイトについて</span>
+    <p>当方はアフィリエイトプログラムに参加しており、リンク経由での購入・申込により報酬を受け取ることがあります。
+    <strong>該当するコンテンツには #PR 等の表記を行います。</strong></p>
+    <p>紹介する製品・サービスは当方が実際に利用したうえで選んでいますが、
+    <strong>その品質・効果を保証するものではありません。</strong>
+    購入・契約の判断はご自身の責任で行ってください。</p>
+    <p>製品・サービスに関する不具合・返金・サポートについては、
+    販売元に直接お問い合わせください。当方は当事者ではありません。</p>
+  </section>
+
+  <section>
+    <span class="bar">4. 免責</span>
+    <p>当方は、当サイトおよび当方のコンテンツの利用によって生じた損害について、
+    <strong>当方に故意または重大な過失がある場合を除き、責任を負いません。</strong></p>
+    <p>リンク先の外部サイトの内容についても同様です。</p>
+    <p>当サイトは予告なく内容の変更・中断・終了を行うことがあります。</p>
+  </section>
+
+  <section>
+    <span class="bar">5. 著作権</span>
+    <p>当方が制作した動画・画像・文章の著作権は当方に帰属します。
+    <strong>無断での複製・転載・再配布・二次利用を禁じます。</strong></p>
+    <p>引用の範囲を超えるご利用を希望される場合は、事前にご連絡ください。</p>
+    <p>各社の商標・ロゴは、それぞれの権利者に帰属します。</p>
+  </section>
+
+  <section>
+    <span class="bar">6. 禁止事項</span>
+    <ul>
+      <li>当サイトへの不正アクセス、または運営を妨害する行為</li>
+      <li>コンテンツの無断転載・改変・商用利用</li>
+      <li>法令または公序良俗に反する行為</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="bar">7. 準拠法・管轄</span>
+    <p>本規約は日本法に準拠します。本規約に関する紛争については、
+    当方の所在地を管轄する裁判所を第一審の専属的合意管轄裁判所とします。</p>
+  </section>
+
+  <section>
+    <span class="bar">8. 改定</span>
+    <p>本規約は必要に応じて改定します。改定した場合はこのページの最終更新日を更新します。</p>
+  </section>
+
+  <section>
+    <span class="bar">9. お問い合わせ</span>
+    <p>本規約に関するお問い合わせは <strong>tamtamcompa@gmail.com</strong> までご連絡ください。</p>
+  </section>
+
+  <hr>
+
+  <section>
+    <span class="bar">Terms of Service (English summary)</span>
+    <p>Snapknow publishes short-form videos about AI and technology news for
+    <strong>informational purposes only</strong>. We aim for accuracy but make no warranty of completeness,
+    timeliness, or fitness for a particular purpose. Nothing here is investment, legal, tax, or medical advice.</p>
+    <p>Content may contain <strong>affiliate links</strong>, always disclosed. We recommend only tools we have
+    used ourselves, but we do not warrant them; purchase decisions are your own, and support or refunds are
+    handled by the vendor, not by us.</p>
+    <p>Except in cases of our willful misconduct or gross negligence, we are not liable for damages arising
+    from use of this site or our content, including linked external sites.</p>
+    <p>All videos, images and text we produce are our copyright; reproduction or redistribution without
+    permission is prohibited. These terms are governed by the laws of Japan.</p>
+    <p>Contact: tamtamcompa@gmail.com</p>
+  </section>
+
+  <a class="back" href="/">← Back to Snapknow</a>
+
+</div>
