@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ja" data-lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Snapknow — プライバシーポリシー">
+<meta property="og:title" content="Snapknow">
+<meta property="og:description" content="AIの「いま」を、30秒で。">
+<meta property="og:type" content="website">
+<title>プライバシーポリシー｜Snapknow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
+
+<style>
+:root{
+  --ground:#F2F1EC;
+  --raised:#F7F6F2;
+  --ink:#0B1220;
+  --muted:#6D6A62;
+  --line:#D8D5CC;
+  --bar:#0B1220;
+  --bar-ink:#FFD133;
+  --bar-ink-soft:#F0EFEA;
+  --focus:#0B63C5;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B1220;
+    --raised:#18203A;
+    --ink:#EFEEE9;
+    --muted:#9A968D;
+    --line:#26304C;
+    --bar:#FFD133;
+    --bar-ink:#0B1220;
+    --bar-ink-soft:#0B1220;
+    --focus:#7FB2FF;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1220;
+  --raised:#18203A;
+  --ink:#EFEEE9;
+  --muted:#9A968D;
+  --line:#26304C;
+  --bar:#FFD133;
+  --bar-ink:#0B1220;
+  --bar-ink-soft:#0B1220;
+  --focus:#7FB2FF;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",system-ui,sans-serif;
+  font-weight:400;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:34rem;margin:0 auto;padding:2rem 1.25rem 4rem;display:flex;flex-direction:column;gap:2.25rem}
+
+/* --- language switch --- */
+.langbar{display:flex;justify-content:flex-end;gap:.375rem}
+.langbar button{
+  font-family:Archivo,system-ui,sans-serif;font-weight:600;font-size:.6875rem;
+  letter-spacing:.09em;text-transform:uppercase;
+  padding:.3rem .55rem;border:1px solid var(--line);border-radius:999px;
+  background:transparent;color:var(--muted);cursor:pointer;line-height:1;
+}
+.langbar button[aria-pressed="true"]{background:var(--bar);color:var(--bar-ink-soft);border-color:var(--bar)}
+.langbar button:focus-visible,a:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+
+/* --- masthead --- */
+.mast{display:flex;flex-direction:column;gap:.5rem}
+.brand{
+  font-weight:900;font-size:clamp(2.25rem,11vw,3rem);line-height:.95;
+  letter-spacing:-.035em;margin:0;text-wrap:balance;
+}
+.tag{font-size:.9375rem;color:var(--muted);margin:0}
+
+/* --- the subtitle bar: the page's structural device.
+       Snapknow burns its captions straight onto the video; section
+       labels here use that same block. --- */
+.bar{
+  display:inline-block;background:var(--bar);color:var(--bar-ink);
+  font-weight:900;font-size:.8125rem;letter-spacing:.02em;
+  padding:.28rem .6rem;line-height:1.35;
+}
+.bar--note{color:var(--bar-ink-soft);font-weight:700}
+
+section{display:flex;flex-direction:column;gap:.875rem}
+
+/* --- disclosure --- */
+.pr{display:flex;flex-direction:column;gap:.5rem}
+.pr p{margin:0;font-size:.8125rem;color:var(--muted)}
+
+/* --- tool card --- */
+.card{
+  background:var(--raised);border:1px solid var(--line);
+  padding:1.25rem;display:flex;flex-direction:column;gap:.75rem;
+}
+.card h3{margin:0;font-size:1.0625rem;font-weight:700;line-height:1.45}
+.card p{margin:0;font-size:.875rem;color:var(--muted)}
+.cta{
+  align-self:flex-start;background:var(--bar);color:var(--bar-ink);
+  font-weight:900;font-size:.9375rem;text-decoration:none;
+  padding:.6rem 1.1rem;line-height:1.4;
+}
+.cta:hover{opacity:.85}
+
+/* --- follow --- */
+.follow{display:flex;flex-direction:column;gap:.5rem}
+.follow a{
+  display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+  padding:.8rem 0;border-bottom:1px solid var(--line);
+  text-decoration:none;color:var(--ink);font-weight:500;
+}
+.follow a:first-of-type{border-top:1px solid var(--line)}
+.follow a:hover .handle{color:var(--ink)}
+.plat{font-family:Archivo,system-ui,sans-serif;font-weight:700;font-size:.9375rem;letter-spacing:.01em}
+.handle{font-family:Archivo,system-ui,sans-serif;font-size:.8125rem;color:var(--muted)}
+
+/* --- about --- */
+.about p{margin:0 0 .5rem;font-size:.875rem;color:var(--muted)}
+.about p:last-child{margin-bottom:0}
+
+/* --- language visibility --- */
+[data-lang="ja"] [data-l]:not([data-l="ja"]),
+[data-lang="en"] [data-l]:not([data-l="en"]),
+[data-lang="es"] [data-l]:not([data-l="es"]){display:none}
+
+@media (prefers-reduced-motion:no-preference){
+  .wrap>*{animation:rise .5s cubic-bezier(.22,.7,.3,1) both}
+  .wrap>*:nth-child(2){animation-delay:.05s}
+  .wrap>*:nth-child(3){animation-delay:.1s}
+  .wrap>*:nth-child(4){animation-delay:.15s}
+  .wrap>*:nth-child(5){animation-delay:.2s}
+  .wrap>*:nth-child(6){animation-delay:.25s}
+  @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+}
+</style>
+<style>
+/* --- 規約ページ用の追加（本文が長いので読みやすさを足す） --- */
+.wrap.doc{max-width:42rem}
+.doc h2{font-size:1.0625rem;font-weight:900;margin:2rem 0 .5rem;line-height:1.45}
+.doc h2:first-of-type{margin-top:0}
+.doc h3{font-size:.9375rem;font-weight:700;margin:1.25rem 0 .35rem;color:var(--ink)}
+.doc p,.doc li{font-size:.875rem;color:var(--muted);margin:0 0 .6rem}
+.doc li{margin-bottom:.35rem}
+.doc ul{margin:0 0 .8rem;padding-left:1.15rem}
+.doc strong{color:var(--ink);font-weight:700}
+.doc a{color:var(--ink)}
+.updated{font-family:Archivo,system-ui,sans-serif;font-size:.75rem;color:var(--muted);letter-spacing:.02em}
+.back{display:inline-block;margin-top:2.5rem;font-weight:700;font-size:.875rem;
+  text-decoration:none;color:var(--ink);border-bottom:2px solid var(--bar-ink)}
+.doc hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0}
+</style>
+
+<div class="wrap doc">
+
+  <header class="mast">
+    <h1 class="brand" style="font-size:clamp(1.75rem,7vw,2.25rem)">プライバシーポリシー</h1>
+    <p class="updated">SNAPKNOW ／ 最終更新 2026-08-31</p>
+  </header>
+
+  <section>
+    <span class="bar">このページについて</span>
+    <p>Snapknow（以下「当方」）は、AIとテクノロジーのニュースを短尺動画で配信する個人事業です。
+    このプライバシーポリシーは、当方が運営するウェブページおよび当方が利用するソフトウェアにおける
+    情報の取り扱いを説明するものです。</p>
+  </section>
+
+  <section>
+    <span class="bar">1. このサイトが集めない情報</span>
+    <p><strong>当サイトは静的なページであり、入力フォームを設置していません。</strong>
+    氏名・メールアドレス・電話番号・住所などを当方が直接収集することはありません。
+    アカウント登録の仕組みもありません。</p>
+  </section>
+
+  <section>
+    <span class="bar">2. ブラウザに保存されるもの</span>
+    <p><strong>当サイトが閲覧者のブラウザに情報を保存することはありません。</strong></p>
+    <p>（2026-08-31まで、表示言語の選択をローカルストレージに保存する機能がありましたが、
+    多言語表示の廃止に伴い削除しました。過去に保存された値が端末に残っている場合は、
+    ブラウザの設定でサイトデータを削除すれば消去できます。）</p>
+  </section>
+
+  <section>
+    <span class="bar">3. アフィリエイトリンクについて</span>
+    <p>当サイトおよび当方の動画の説明文には、アフィリエイトリンクを含むことがあります。
+    該当箇所には <strong>#PR</strong> などの表記を行っています。</p>
+    <p>リンクをクリックすると、広告主またはアフィリエイトサービスプロバイダ（ASP）が
+    成果測定のためにCookieを設定する場合があります。これは各社の管理下にあり、当方が設定するものではありません。</p>
+    <p><strong>当方がASPから受け取るのは、クリック数や成果件数などの集計値のみです。</strong>
+    購入者個人を特定できる情報（氏名・住所・カード情報など）を当方が受け取ることはありません。</p>
+    <p>各社の取り扱いについては、リンク先およびASPのプライバシーポリシーをご確認ください。</p>
+  </section>
+
+  <section>
+    <span class="bar">4. アクセスログ</span>
+    <p>当サイトはNetlify社のホスティングサービス上で公開されています。
+    サービス提供の過程で、IPアドレス・ブラウザの種類・アクセス日時などが同社に記録される場合があります。
+    <strong>当方はこれらを個人の特定に用いません。</strong></p>
+    <p>当方は現時点でアクセス解析ツール（Google Analytics等）を当サイトに設置していません。</p>
+  </section>
+
+  <section>
+    <span class="bar">5. 外部サービスへのリンク</span>
+    <p>当サイトはYouTube・TikTok・Instagram および広告主のページへのリンクを含みます。
+    リンク先での情報の取り扱いは各社のプライバシーポリシーに従います。当方は責任を負いません。</p>
+  </section>
+
+  <section>
+    <span class="bar">6. Google APIの利用について</span>
+    <p>当方は、自らが運営するYouTubeチャンネルの成績を記録・分析する目的で、
+    Google の API（YouTube Data API v3 および YouTube Analytics API）を利用しています。</p>
+    <ul>
+      <li>アクセスするのは<strong>当方自身が所有するチャンネルのデータに限られます。</strong>
+      他者のチャンネルやアカウントにアクセスすることはありません</li>
+      <li>権限は<strong>読み取り専用</strong>です。動画の投稿・編集・削除は行いません</li>
+      <li>取得するのは再生数・視聴時間・視聴維持率などの<strong>集計された指標のみ</strong>で、
+      視聴者個人を特定する情報は含まれません</li>
+      <li>取得したデータは当方の管理する端末内に保存し、
+      <strong>第三者に提供・販売・譲渡しません。</strong>広告目的にも使用しません</li>
+    </ul>
+    <p><strong>Google APIから受け取った情報の当方による利用および他者への移転は、
+    「限定的な使用」の要件を含む
+    <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener" target="_blank">Google API サービスのユーザーデータに関するポリシー</a>
+    に準拠します。</strong></p>
+    <p>この連携は、Googleアカウントの
+    <a href="https://myaccount.google.com/permissions" rel="noopener" target="_blank">「サードパーティ製のアプリとサービス」</a>
+    からいつでも解除できます。</p>
+  </section>
+
+  <section>
+    <span class="bar">7. 子どもの利用について</span>
+    <p>当サイトは特定の年齢層を対象としたサービスではなく、
+    13歳未満の方から意図的に情報を収集することはありません。</p>
+  </section>
+
+  <section>
+    <span class="bar">8. 改定</span>
+    <p>本ポリシーは必要に応じて改定します。改定した場合はこのページの最終更新日を更新します。</p>
+  </section>
+
+  <section>
+    <span class="bar">9. お問い合わせ</span>
+    <p>本ポリシーに関するお問い合わせは <strong>tamtamcompa@gmail.com</strong> までご連絡ください。</p>
+  </section>
+
+  <hr>
+
+  <section>
+    <!-- ⚠ この英語サマリーは消さないこと（2026-09-01・管理ルーム指示）。
+     「Google API Services User Data Policy, including the Limited Use requirements」の一文は
+     OAuth同意画面を本番状態に保つ条件。消えると指標の自動取得が止まる。
+     サイト本体は日本語のみ（2026-08-31 決定）だが、このブロックだけ例外。 -->
+<span class="bar">Privacy Policy (English summary)</span>
+    <p>Snapknow is a sole proprietorship publishing short-form videos about AI and technology news.</p>
+    <p><strong>This site collects no personal data.</strong> It is a static page with no forms and no
+    accounts. This site stores nothing in your browser (a language-preference setting was removed on 2026-08-31).
+    We do not run analytics tools on this site.</p>
+    <p>Pages may contain <strong>affiliate links</strong>, disclosed as #PR / #ad / #publicidad.
+    Advertisers or affiliate networks may set their own cookies for attribution. We receive only
+    aggregate counts (clicks, conversions) and never personally identifiable information about buyers.</p>
+    <p><strong>Google API use:</strong> we use the YouTube Data API v3 and YouTube Analytics API solely to
+    read analytics for <strong>our own channel</strong>, with read-only scope. The data consists of aggregate
+    metrics only, is stored on our own device, and is never sold, shared, or transferred to third parties.
+    <strong>Snapknow's use and transfer of information received from Google APIs adheres to the
+    <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener" target="_blank">Google API Services User Data Policy</a>,
+    including the Limited Use requirements.</strong>
+    You can revoke this access at any time at
+    <a href="https://myaccount.google.com/permissions" rel="noopener" target="_blank">Google Account permissions</a>.</p>
+    <p>Contact: tamtamcompa@gmail.com</p>
+  </section>
+
+  <a class="back" href="/">← Snapknow に戻る</a>
+
+</div>
