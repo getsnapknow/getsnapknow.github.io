@@ -145,45 +145,120 @@
    "voice": "生声",
    "tt": 0,
    "ig": 0
+  },
+  {
+   "id": "SK015",
+   "date": "2026-09-05",
+   "views": 1549,
+   "yt": "RZcD0njYyUc",
+   "title": "賢いと安全は別",
+   "blurb": "世界一賢いAIが出た。同じ発表で、危険度も最高になった。",
+   "hours": 38,
+   "rate": 40.7,
+   "voice": "生声",
+   "tt": 0,
+   "ig": 0
+  },
+  {
+   "id": "SK016",
+   "date": "2026-09-05",
+   "views": 696,
+   "yt": "yri_IgmnAk8",
+   "title": "入れてはいけない",
+   "blurb": "社員が個人のAIに顧客情報を貼り付けた。悪気はなくても、出ていく。",
+   "hours": 24,
+   "rate": 29.4,
+   "voice": "生声",
+   "tt": 0,
+   "ig": 0
+  },
+  {
+   "id": "SK017",
+   "date": "2026-09-06",
+   "views": 984,
+   "yt": "yQJuJgA1Lpg",
+   "title": "誰が作った",
+   "blurb": "",
+   "hours": 14,
+   "rate": 69.8,
+   "voice": "生声",
+   "tt": 0,
+   "ig": 0
+  },
+  {
+   "id": "SK019",
+   "date": "2026-09-07",
+   "views": 0,
+   "yt": "j18q39m26Fk",
+   "title": "誰が書いた",
+   "blurb": "",
+   "hours": 0,
+   "rate": null,
+   "voice": "生声",
+   "tt": 0,
+   "ig": 0
+  },
+  {
+   "id": "SK018",
+   "date": "2026-09-07",
+   "views": 0,
+   "yt": "IpYu9-_0CjA",
+   "title": "9割が50代以上",
+   "blurb": "",
+   "hours": 0,
+   "rate": null,
+   "voice": "生声",
+   "tt": 0,
+   "ig": 0
   }
  ],
- "posted": 11,
- "total_views": 10287,
+ "posted": 16,
+ "total_views": 13516,
  "subs": 6,
  "subs_goal": 1000,
- "decisions": 341,
- "stumbles": 61,
+ "decisions": 343,
+ "stumbles": 63,
  "orders": 0,
  "applied": 0,
  "platforms": {
-  "youtube": 10287,
+  "youtube": 13516,
   "tiktok": 448,
   "instagram": 187,
   "threads": null,
   "note": null,
-  "channel_page": 21,
-  "flows_as_of": "2026-09-05"
+  "channel_page": 43,
+  "flows_as_of": "2026-09-07"
  },
  "flows": [
   {
    "from": "おすすめ（ショートフィード）",
    "to": "YouTube",
-   "v": 5393
+   "v": 10026
   },
   {
    "from": "YouTube内の他ページ",
    "to": "YouTube",
-   "v": 86
+   "v": 174
   },
   {
    "from": "検索",
    "to": "YouTube",
-   "v": 70
+   "v": 122
   },
   {
    "from": "登録者",
    "to": "YouTube",
-   "v": 4
+   "v": 37
+  },
+  {
+   "from": "PLAYLIST",
+   "to": "YouTube",
+   "v": 6
+  },
+  {
+   "from": "SHORTS_CONTENT_LINKS",
+   "to": "YouTube",
+   "v": 3
   },
   {
    "from": "外部サイト",
@@ -191,14 +266,24 @@
    "v": 3
   },
   {
+   "from": "その他",
+   "to": "YouTube",
+   "v": 2
+  },
+  {
    "from": "ハッシュタグ",
+   "to": "YouTube",
+   "v": 1
+  },
+  {
+   "from": "関連動画",
    "to": "YouTube",
    "v": 1
   },
   {
    "from": "YouTube",
    "to": "チャンネルページ",
-   "v": 21
+   "v": 43
   },
   {
    "from": "チャンネルページ",
