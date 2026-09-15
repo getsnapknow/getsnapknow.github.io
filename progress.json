@@ -1,6 +1,6 @@
 {
- "updated": "2026-09-09",
- "day": 13,
+ "updated": "2026-09-16",
+ "day": 20,
  "start": "2026-08-28",
  "videos": [
   {
@@ -223,80 +223,177 @@
    "voice": "生声",
    "tt": 0,
    "ig": 0
+  },
+  {
+   "id": "SK021",
+   "date": "2026-09-08",
+   "views": 175,
+   "yt": "fx5dpuujnB8",
+   "title": "3回ボツにした",
+   "blurb": "",
+   "hours": 24,
+   "rate": 7.1,
+   "voice": "生声",
+   "tt": 0,
+   "ig": 0
+  },
+  {
+   "id": "SK022",
+   "date": "2026-09-08",
+   "views": 940,
+   "yt": "7_s2CbaGm8s",
+   "title": "消したはずのデータ",
+   "blurb": "",
+   "hours": 12,
+   "rate": 75.2,
+   "voice": "生声",
+   "tt": 0,
+   "ig": 0
+  },
+  {
+   "id": "SK023",
+   "date": "2026-09-09",
+   "views": 0,
+   "yt": "ZDFnZf7V4sc",
+   "title": "いちばん賢いAIが安いとは限らない",
+   "blurb": "",
+   "hours": 0,
+   "rate": null,
+   "voice": "生声",
+   "tt": 0,
+   "ig": 0
+  },
+  {
+   "id": "Week02",
+   "date": "2026-09-09",
+   "views": 0,
+   "yt": "",
+   "title": "AIに「1,000人まで6年」と言われた週｜AIの言う通りにしてみた Week 2",
+   "blurb": "",
+   "hours": 0,
+   "rate": null,
+   "voice": "生声",
+   "tt": 0,
+   "ig": 0
+  },
+  {
+   "id": "SK025",
+   "date": "2026-09-09",
+   "views": 0,
+   "yt": "eVXl5sdJCEY",
+   "title": "マラソンのポスター、菜の花でAIと見抜かれました。",
+   "blurb": "",
+   "hours": 0,
+   "rate": null,
+   "voice": "生声",
+   "tt": 0,
+   "ig": 0
+  },
+  {
+   "id": "SK026",
+   "date": "2026-09-10",
+   "views": 0,
+   "yt": "l6dS0S3TpRA",
+   "title": "新しく入れないAIが出てきました。",
+   "blurb": "",
+   "hours": 0,
+   "rate": null,
+   "voice": "生声",
+   "tt": 0,
+   "ig": 0
+  },
+  {
+   "id": "SK027",
+   "date": "2026-09-11",
+   "views": 0,
+   "yt": "x4c64cBHDQY",
+   "title": "深夜の問い合わせが、AIで3倍満足されました。",
+   "blurb": "",
+   "hours": 0,
+   "rate": null,
+   "voice": "生声",
+   "tt": 0,
+   "ig": 0
+  },
+  {
+   "id": "SK028",
+   "date": "2026-09-12",
+   "views": 0,
+   "yt": "NbdOjoKuS3c",
+   "title": "止めようとして、7回失敗しました。",
+   "blurb": "",
+   "hours": 0,
+   "rate": null,
+   "voice": "合成音声",
+   "tt": 0,
+   "ig": 0
+  },
+  {
+   "id": "SK031",
+   "date": "2026-09-14",
+   "views": 0,
+   "yt": "O0kaUrbLExY",
+   "title": "作っている本人が、ペースを落とせと言いました。",
+   "blurb": "",
+   "hours": 0,
+   "rate": null,
+   "voice": "生声",
+   "tt": 0,
+   "ig": 0
   }
  ],
- "posted": 17,
- "total_views": 16774,
+ "posted": 26,
+ "total_views": 17889,
  "subs": 6,
  "subs_goal": 1000,
- "decisions": 350,
- "stumbles": 64,
+ "decisions": 365,
+ "stumbles": 68,
  "orders": 0,
  "applied": 0,
  "platforms": {
-  "youtube": 16774,
+  "youtube": 17889,
   "tiktok": 448,
   "instagram": 187,
   "threads": null,
   "note": null,
-  "channel_page": 43,
-  "flows_as_of": "2026-09-07"
+  "channel_page": 0,
+  "flows_as_of": "2026-09-09"
  },
  "flows": [
   {
    "from": "おすすめ（ショートフィード）",
    "to": "YouTube",
-   "v": 10026
+   "v": 2367
   },
   {
    "from": "YouTube内の他ページ",
    "to": "YouTube",
-   "v": 174
+   "v": 40
   },
   {
    "from": "検索",
    "to": "YouTube",
-   "v": 122
+   "v": 9
   },
   {
    "from": "登録者",
    "to": "YouTube",
-   "v": 37
-  },
-  {
-   "from": "PLAYLIST",
-   "to": "YouTube",
-   "v": 6
+   "v": 8
   },
   {
    "from": "SHORTS_CONTENT_LINKS",
    "to": "YouTube",
-   "v": 3
-  },
-  {
-   "from": "外部サイト",
-   "to": "YouTube",
-   "v": 3
-  },
-  {
-   "from": "その他",
-   "to": "YouTube",
    "v": 2
   },
   {
-   "from": "ハッシュタグ",
-   "to": "YouTube",
-   "v": 1
-  },
-  {
-   "from": "関連動画",
+   "from": "外部サイト",
    "to": "YouTube",
    "v": 1
   },
   {
    "from": "YouTube",
    "to": "チャンネルページ",
-   "v": 43
+   "v": 0
   },
   {
    "from": "チャンネルページ",
@@ -357,5 +454,12 @@
    "text": "累計再生が1万回に。登録者は3人"
   }
  ],
- "this_week": "公開の依頼を11件読んだら、9件が「素材あり・編集だけ」だった。売り場が違う。提案は取り下げて、出品と直接の営業に切り替えた。／ 自分の声の4本に字幕のずれ。原因は3つあった。"
+ "this_week": "公開の依頼を11件読んだら、9件が「素材あり・編集だけ」だった。売り場が違う。提案は取り下げて、出品と直接の営業に切り替えた。／ 自分の声の4本に字幕のずれ。原因は3つあった。",
+ "sales": 0,
+ "fixed": 11400,
+ "tomorrow": null,
+ "note_latest": {
+  "title": "Day 1〜7｜AIで動画事業をひとりで始めて、最初の1週間に起きたこと",
+  "url": "https://note.com/snapknow"
+ }
 }
