@@ -61,6 +61,12 @@ p{margin:0}
 
 /* 節目・つまずき */
 .section{margin-top:40px;display:flex;flex-direction:column;gap:10px}
+#faq details{border-bottom:1px solid var(--rule);padding:12px 0}
+#faq summary{cursor:pointer;font-weight:600;font-size:15px;list-style:none}
+#faq summary::-webkit-details-marker{display:none}
+#faq summary::before{content:"＋";margin-right:8px;color:var(--ink-3)}
+#faq details[open] summary::before{content:"−"}
+#faq details p{margin:10px 0 2px;font-size:14.5px;color:var(--ink-2);line-height:1.85}
 .oops{font-size:17px;line-height:1.75}
 .ms{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
 .ms li{display:grid;grid-template-columns:58px minmax(0,1fr);gap:12px;padding:8px 0;border-bottom:1px solid var(--rule-2);font-size:14px;align-items:baseline}
@@ -134,9 +140,16 @@ p{margin:0}
 
   <!-- ===== 見出し ===== -->
   <section class="lead" id="growth">
-    <h1>ひとりで、<br>AIの動画事業を始めて<br>いま <span class="mono n" id="g-day">—</span> 日目。</h1>
-    <p class="muted">2026年8月28日に始めました。毎日1本、30秒。数字は全部実測で、うまくいかなかったことも書きます。</p>
+    <h1>AIに仕組みを作らせて<br>1日15分で稼げるか、<br>いま <span class="mono n" id="g-day">—</span> 日目。</h1>
+    <p class="muted">30代会社員のSnapが、2026年8月28日にひとりで始めました。朝7時と夜7時に1本ずつ、週に1本はAIへの報告会。<strong>数字も失敗も、全部そのまま出します。</strong></p>
   </section>
+
+  <div class="ledger" aria-label="帳簿">
+    <div class="row"><span class="k">Day</span><span class="mono v" id="g-day2">—</span></div>
+    <div class="row"><span class="k">累計売上</span><span class="mono v" id="g-sales">—</span></div>
+    <div class="row"><span class="k">固定費線（月）</span><span class="mono v" id="g-fixed">—</span></div>
+  </div>
+  <p class="small" style="margin-top:8px">毎朝の動画は、この3行から始まります。<strong>売上が固定費線を超えた日</strong>が、この実験の合格ラインです。</p>
 
   <div class="ledger" aria-label="今日の数字">
     <div class="row"><span class="k">投稿した動画</span><span class="mono v" id="g-posted">—</span></div>
@@ -159,6 +172,7 @@ p{margin:0}
       <img id="g-today-img" alt="" loading="lazy">
       <div><div class="t" id="g-today-t"></div><div class="s" id="g-today-s"></div><span class="go">YouTubeで見る</span></div>
     </a>
+    <p class="small" id="g-tomorrow" hidden></p>
   </section>
 
   <section class="section">
@@ -183,6 +197,13 @@ p{margin:0}
     <p class="small" id="flow-note">—</p>
   </section>
 
+  <!-- ===== note ===== -->
+  <section class="section" id="note">
+    <span class="label">週ごとの記録（note）</span>
+    <p>動画に入らなかったこと——なぜそう判断したか、何回やり直したか、どこでつまずいたか——は、週に1本の記事にまとめています。</p>
+    <a class="more" id="g-note" href="https://note.com/snapknow" rel="noopener" target="_blank">noteで読む</a>
+  </section>
+
   <!-- ===== 受託 ===== -->
   <section class="hire" id="hire">
     <span class="label">ショート動画、作ります</span>
@@ -194,8 +215,8 @@ p{margin:0}
       <li>実績はまだ<span class="mono" id="t-orders">0</span>件。だから上の数字を隠しません。<span class="mono" id="t-stum">—</span>回やり直しました</li>
     </ul>
     <div class="price"><span class="mono big">8,000円</span><span class="u">／1本（税込）</span><span class="u">・月8本 30,000円 ／ 月16本 50,000円</span></div>
-    <a class="cta" href="mailto:tamtamcompa@gmail.com?subject=%E5%8B%95%E7%94%BB%E5%88%B6%E4%BD%9C%E3%81%AE%E7%9B%B8%E8%AB%87">メールで相談する（無料）</a>
-    <p class="fine">最低契約期間なし。お試し1本が気に入らなければ、料金はいただきません。<br>できないこと：実写の撮影・編集、人の声の出演。文字と図と音で作る動画が専門です。<br>tamtamcompa@gmail.com ／ 通常24時間以内に返信します</p>
+    <a class="cta" href="mailto:getsnapknow@gmail.com?subject=%E5%8B%95%E7%94%BB%E5%88%B6%E4%BD%9C%E3%81%AE%E7%9B%B8%E8%AB%87">メールで相談する（無料）</a>
+    <p class="fine">最低契約期間なし。お試し1本が気に入らなければ、料金はいただきません。<br>できないこと：実写の撮影・編集、人の声の出演。文字と図と音で作る動画が専門です。<br>getsnapknow@gmail.com ／ 通常24時間以内に返信します</p>
   </section>
 
   <!-- ===== 動画 ===== -->
@@ -209,12 +230,29 @@ p{margin:0}
   <section class="section me" style="margin-top:48px">
     <span class="label">運営者</span>
     <div class="who"><b>Snap</b><span class="small">Snapknow</span></div>
-    <p>AIのニュースを毎日1本、30秒の動画にしています。2026年8月28日に、ひとりで始めました。</p>
+    <p>30代の会社員です。2026年8月28日に、ひとりで始めました。AIに仕組みを作らせて、1日15分で稼げるかを試しています。朝7時は自分の帳簿から始める『今日の1円ニュース』、夜7時はAIニュースの解説、週に1本はAIへの報告会。</p>
     <ul>
       <li><strong>専門家ではありません。</strong>AIを追いかけている、ふつうの人間です。だから「専門用語を使わない」を方針にしています。</li>
       <li><strong>ナレーションは自分の声です。</strong>2026年9月2日から、合成音声をやめて自分で読んでいます（それ以前の動画は合成音声です）。</li>
       <li><strong>出典は必ず元をたどります。</strong>読み間違いと誤字は、機械で検査してから出しています。見つけたら教えてください。</li>
     </ul>
+  </section>
+
+  <!-- ===== よくある質問 ===== -->
+  <section class="section" id="faq" style="margin-top:48px">
+    <span class="label">よくある質問</span>
+    <details><summary>動画はAIが作っているんですか。</summary>
+      <p>台本の下書き・字幕・図・BGMはプログラムとAIが作ります。<strong>ナレーションは自分の声です</strong>（2026年9月2日から。それ以前は合成音声でした）。<strong>どのニュースを扱うかを選ぶのは自分</strong>です。ここだけは機械に任せていません。</p></details>
+    <details><summary>顔や本名は出さないんですか。</summary>
+      <p>出しません。名乗りは Snap です。取引先や役所には正しく名乗りますが、公開の場では出さない方針です。</p></details>
+    <details><summary>売上0円と書いてありますが、何で稼ぐつもりですか。</summary>
+      <p>いまはショート動画の受託制作です（1本8,000円）。動画の広告収入は当面あてにしていません。<strong>数字が動いたら、そのままここに出します。</strong></p></details>
+    <details><summary>間違いを見つけました。</summary>
+      <p>教えてください。読み間違いと数字は機械で検査していますが、<strong>すり抜けたことが実際にあります</strong>（過去22本を検査し直して1件見つかりました）。訂正は説明欄に残し、消しません。</p></details>
+    <details><summary>1日15分というのは本当ですか。</summary>
+      <p>自分が手を動かすのが15分、という意味です。録音と投稿がその中身です。<strong>作る仕組みのほうは、まだそれ以上かかっています。</strong>そこも含めて記録しています。</p></details>
+    <details><summary>依頼したいのですが、何から始めますか。</summary>
+      <p>上の「メールで相談する」から、作りたい動画の内容を一言だけ送ってください。6項目の記入用紙をお送りします（記入10分）。<strong>お試し1本が気に入らなければ料金はいただきません。</strong></p></details>
   </section>
 
   <section class="section" style="margin-top:40px">
@@ -224,7 +262,7 @@ p{margin:0}
       <a href="https://www.tiktok.com/@getsnapknow" rel="noopener" target="_blank">TikTok</a>
       <a href="https://www.instagram.com/getsnapknow/" rel="noopener" target="_blank">Instagram</a>
     </nav>
-    <p class="small" style="margin-top:6px">運営：Snapknow（個人事業）／ お問い合わせ：tamtamcompa@gmail.com</p>
+    <p class="small" style="margin-top:6px">運営：Snapknow（個人事業）／ お問い合わせ：getsnapknow@gmail.com</p>
   </section>
 
   <footer class="foot">
@@ -241,6 +279,20 @@ p{margin:0}
   const md=d=>d.slice(5).replace('-','/');
   fetch('progress.json?'+Date.now()).then(r=>r.json()).then(p=>{
     $('g-day').textContent=p.day; $('g-posted').textContent=n(p.posted); $('g-views').textContent=n(p.total_views);
+    // 帳簿の3行（毎朝の動画の冒頭と同じ数字・同じ並び）
+    $('g-day2').textContent=p.day;
+    $('g-sales').textContent=n(p.sales||0)+'円';
+    $('g-fixed').textContent=n(p.fixed||11400)+'円';
+    // 明日の予告（progress.json に tomorrow があるときだけ出す）
+    if(p.tomorrow && p.tomorrow.title){
+      const e=$('g-tomorrow'); e.hidden=false;
+      e.innerHTML='明日の予告：<strong>'+p.tomorrow.title+'</strong>'+(p.tomorrow.at?'（'+p.tomorrow.at+'）':'');
+    }
+    // note の最新記事
+    if(p.note_latest && p.note_latest.url){
+      const a=$('g-note'); a.href=p.note_latest.url;
+      if(p.note_latest.title) a.textContent=p.note_latest.title+'（noteで読む）';
+    }
     $('g-subs').textContent=n(p.subs); $('g-dec').textContent=n(p.decisions); $('g-stum').textContent=n(p.stumbles);
     $('g-orders').textContent=n(p.orders); $('t-orders').textContent=n(p.orders); $('t-stum').textContent=n(p.stumbles);
     $('g-upd').textContent=p.updated; $('g-week').textContent=p.this_week||'';
