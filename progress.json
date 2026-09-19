@@ -1,6 +1,6 @@
 {
- "updated": "2026-09-19",
- "day": 23,
+ "updated": "2026-09-20",
+ "day": 24,
  "start": "2026-08-28",
  "videos": [
   {
@@ -10,7 +10,7 @@
    "yt": "nQCtZai66jA",
    "title": "作った会社が分からないAIが、世界最強を抜いた",
    "blurb": "ベンチマークで首位に立ったのに、出どころが分からなかった。",
-   "hours": 510,
+   "hours": 534,
    "rate": 0.6,
    "voice": "合成音声",
    "tt": 0,
@@ -23,7 +23,7 @@
    "yt": "pO4CNBgSVFU",
    "title": "OpenAIが「半導体メーカー」になった理由",
    "blurb": "GPUを買う側から、作る側へ。理由はコスト。",
-   "hours": 493,
+   "hours": 517,
    "rate": 0.5,
    "voice": "合成音声",
    "tt": 0,
@@ -36,8 +36,8 @@
    "yt": "SJaMmQna1Dk",
    "title": "2.4兆パラメータのAIが、無料で公開された",
    "blurb": "パラメータ数は過去最大級。それが無料で使える。",
-   "hours": 469,
-   "rate": 1.0,
+   "hours": 493,
+   "rate": 0.9,
    "voice": "合成音声",
    "tt": 102,
    "ig": 42
@@ -49,8 +49,8 @@
    "yt": "FsPfK9KDMPk",
    "title": "性能は上がって、値段は半分になったAI",
    "blurb": "性能は上がって、値段は半分。AIの価格競争。",
-   "hours": 434,
-   "rate": 2.6,
+   "hours": 458,
+   "rate": 2.5,
    "voice": "合成音声",
    "tt": 106,
    "ig": 7
@@ -62,8 +62,8 @@
    "yt": "Pdbdtd7zt1A",
    "title": "AIたちは裏で相談していた",
    "blurb": "複数のAIが、人に見えないところで互いに相談していた。",
-   "hours": 422,
-   "rate": 2.7,
+   "hours": 446,
+   "rate": 2.6,
    "voice": "合成音声",
    "tt": 144,
    "ig": 3
@@ -75,8 +75,8 @@
    "yt": "pgzlddA6DjA",
    "title": "推しがAIだった",
    "blurb": "Instagramが「AI生成」ラベルを義務化。推しが実在しない時代。",
-   "hours": 383,
-   "rate": 2.3,
+   "hours": 407,
+   "rate": 2.2,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -88,8 +88,8 @@
    "yt": "aJDvh6BgOFw",
    "title": "なんで通じないの",
    "blurb": "AIに小分けで頼むと成績が39%落ちる。まとめて頼むのが正解。",
-   "hours": 398,
-   "rate": 3.0,
+   "hours": 422,
+   "rate": 2.9,
    "voice": "合成音声",
    "tt": 96,
    "ig": 7
@@ -101,8 +101,8 @@
    "yt": "mB3Gd31iMTc",
    "title": "撮られてるかも",
    "blurb": "メタのスマートグラスで無断撮影された動画が、消すと言われて1か月経っても残っている。",
-   "hours": 375,
-   "rate": 2.6,
+   "hours": 399,
+   "rate": 2.4,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -114,8 +114,8 @@
    "yt": "Rz1dbdTJ0Wk",
    "title": "宿題はしてない",
    "blurb": "日本の高校生の88.4%がAIを使う。でも宿題の代行に使うのは10.3%だけ。",
-   "hours": 359,
-   "rate": 2.8,
+   "hours": 383,
+   "rate": 2.6,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -127,8 +127,8 @@
    "yt": "z90GcfcURyU",
    "title": "もう消せない",
    "blurb": "AIが書いた文章に、見えないマークが入りはじめた。コピーしても消えない。",
-   "hours": 350,
-   "rate": 2.6,
+   "hours": 374,
+   "rate": 2.5,
    "voice": "合成音声",
    "tt": 0,
    "ig": 0
@@ -140,8 +140,8 @@
    "yt": "67s4Ip8sUEU",
    "title": "言う通りに行ったら",
    "blurb": "AIの言うとおりに登山して遭難。水も食料も足りなかった。",
-   "hours": 338,
-   "rate": 9.4,
+   "hours": 362,
+   "rate": 8.8,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -153,8 +153,8 @@
    "yt": "RZcD0njYyUc",
    "title": "賢いと安全は別",
    "blurb": "世界一賢いAIが出た。同じ発表で、危険度も最高になった。",
-   "hours": 326,
-   "rate": 6.5,
+   "hours": 350,
+   "rate": 6.0,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -166,8 +166,8 @@
    "yt": "yri_IgmnAk8",
    "title": "入れてはいけない",
    "blurb": "社員が個人のAIに顧客情報を貼り付けた。悪気はなくても、出ていく。",
-   "hours": 312,
-   "rate": 2.2,
+   "hours": 336,
+   "rate": 2.1,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -179,8 +179,8 @@
    "yt": "yQJuJgA1Lpg",
    "title": "誰が作った",
    "blurb": "",
-   "hours": 302,
-   "rate": 3.7,
+   "hours": 326,
+   "rate": 3.5,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -192,8 +192,8 @@
    "yt": "j18q39m26Fk",
    "title": "誰が書いた",
    "blurb": "",
-   "hours": 278,
-   "rate": 3.5,
+   "hours": 302,
+   "rate": 3.2,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -205,7 +205,7 @@
    "yt": "IpYu9-_0CjA",
    "title": "9割が50代以上",
    "blurb": "",
-   "hours": 273,
+   "hours": 297,
    "rate": 0.6,
    "voice": "生声",
    "tt": 0,
@@ -218,8 +218,8 @@
    "yt": "IDtNMQx7ybU",
    "title": "誰の命令が入ってる",
    "blurb": "",
-   "hours": 266,
-   "rate": 3.5,
+   "hours": 290,
+   "rate": 3.2,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -231,8 +231,8 @@
    "yt": "fx5dpuujnB8",
    "title": "3回ボツにした",
    "blurb": "",
-   "hours": 255,
-   "rate": 0.7,
+   "hours": 279,
+   "rate": 0.6,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -244,8 +244,8 @@
    "yt": "7_s2CbaGm8s",
    "title": "消したはずのデータ",
    "blurb": "",
-   "hours": 243,
-   "rate": 3.9,
+   "hours": 267,
+   "rate": 3.6,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -257,8 +257,8 @@
    "yt": "ZDFnZf7V4sc",
    "title": "いちばん賢いAIが安いとは限らない",
    "blurb": "",
-   "hours": 230,
-   "rate": 4.7,
+   "hours": 254,
+   "rate": 4.2,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -270,7 +270,7 @@
    "yt": "",
    "title": "AIに「1,000人まで6年」と言われた週｜AIの言う通りにしてみた Week 2",
    "blurb": "",
-   "hours": 215,
+   "hours": 239,
    "rate": 0.1,
    "voice": "生声",
    "tt": 0,
@@ -279,12 +279,12 @@
   {
    "id": "SK025",
    "date": "2026-09-09",
-   "views": 272,
+   "views": 273,
    "yt": "eVXl5sdJCEY",
    "title": "マラソンのポスター、菜の花でAIと見抜かれました。",
    "blurb": "",
-   "hours": 215,
-   "rate": 1.3,
+   "hours": 239,
+   "rate": 1.1,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -296,8 +296,8 @@
    "yt": "l6dS0S3TpRA",
    "title": "新しく入れないAIが出てきました。",
    "blurb": "",
-   "hours": 192,
-   "rate": 1.1,
+   "hours": 216,
+   "rate": 1.0,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -309,8 +309,8 @@
    "yt": "x4c64cBHDQY",
    "title": "深夜の問い合わせが、AIで3倍満足されました。",
    "blurb": "",
-   "hours": 183,
-   "rate": 6.1,
+   "hours": 207,
+   "rate": 5.4,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -322,8 +322,8 @@
    "yt": "NbdOjoKuS3c",
    "title": "止めようとして、7回失敗しました。",
    "blurb": "",
-   "hours": 157,
-   "rate": 3.7,
+   "hours": 181,
+   "rate": 3.2,
    "voice": "合成音声",
    "tt": 0,
    "ig": 0
@@ -331,12 +331,12 @@
   {
    "id": "SK031",
    "date": "2026-09-14",
-   "views": 297,
+   "views": 298,
    "yt": "O0kaUrbLExY",
    "title": "作っている本人が、ペースを落とせと言いました。",
    "blurb": "",
-   "hours": 105,
-   "rate": 2.8,
+   "hours": 129,
+   "rate": 2.3,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -344,12 +344,12 @@
   {
    "id": "SK032",
    "date": "2026-09-16",
-   "views": 356,
+   "views": 558,
    "yt": "zsBV1TAH4-I",
    "title": "政府の側が、なら自分で止めろと言いました。",
    "blurb": "",
-   "hours": 60,
-   "rate": 5.9,
+   "hours": 84,
+   "rate": 6.6,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -357,12 +357,12 @@
   {
    "id": "SK033",
    "date": "2026-09-16",
-   "views": 1119,
+   "views": 1132,
    "yt": "ynmp6lg1nso",
    "title": "大統領が、名前を出して言い返しました。",
    "blurb": "",
-   "hours": 58,
-   "rate": 19.4,
+   "hours": 82,
+   "rate": 13.9,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -370,12 +370,12 @@
   {
    "id": "SK034",
    "date": "2026-09-16",
-   "views": 1319,
+   "views": 1214,
    "yt": "idgHnZo4S98",
    "title": "見ていないときのAIは、測れないそうです。",
    "blurb": "",
-   "hours": 51,
-   "rate": 26.1,
+   "hours": 75,
+   "rate": 16.3,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -383,12 +383,12 @@
   {
    "id": "SK038",
    "date": "2026-09-18",
-   "views": 0,
+   "views": 953,
    "yt": "B1kOAQI8lY4",
    "title": "言い合っていた3社が、話していたそうです。",
    "blurb": "",
-   "hours": 0,
-   "rate": null,
+   "hours": 26,
+   "rate": 37.2,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -396,12 +396,12 @@
   {
    "id": "Week03",
    "date": "2026-09-18",
-   "views": 0,
+   "views": 1,
    "yt": "",
    "title": "ショート動画は2万再生。この番組は10再生｜AIの言う通りにしてみた Week 3",
    "blurb": "",
-   "hours": 0,
-   "rate": null,
+   "hours": 22,
+   "rate": 0.0,
    "voice": "生声",
    "tt": 0,
    "ig": 0
@@ -409,19 +409,32 @@
   {
    "id": "SK037",
    "date": "2026-09-18",
-   "views": 0,
+   "views": 1054,
    "yt": "rRQPeTNuVZg",
    "title": "インスタに、月949円のプランができました。",
    "blurb": "",
-   "hours": 0,
-   "rate": null,
+   "hours": 29,
+   "rate": 35.9,
+   "voice": "生声",
+   "tt": 0,
+   "ig": 0
+  },
+  {
+   "id": "SK039",
+   "date": "2026-09-19",
+   "views": 933,
+   "yt": "6aY3hSuming",
+   "title": "AIが作った字幕が、2万回を20回にしていました。",
+   "blurb": "",
+   "hours": 12,
+   "rate": 74.6,
    "voice": "生声",
    "tt": 0,
    "ig": 0
   }
  ],
- "posted": 32,
- "total_views": 24908,
+ "posted": 33,
+ "total_views": 27961,
  "subs": 9,
  "subs_goal": 1000,
  "decisions": 381,
@@ -429,49 +442,74 @@
  "orders": 0,
  "applied": 0,
  "platforms": {
-  "youtube": 24908,
+  "youtube": 27961,
   "tiktok": 448,
   "instagram": 187,
   "threads": null,
   "note": null,
-  "channel_page": 0,
-  "flows_as_of": "2026-09-09"
+  "channel_page": 60,
+  "flows_as_of": "2026-09-19"
  },
  "flows": [
   {
    "from": "おすすめ（ショートフィード）",
    "to": "YouTube",
-   "v": 2367
+   "v": 23871
   },
   {
    "from": "YouTube内の他ページ",
    "to": "YouTube",
-   "v": 40
+   "v": 392
   },
   {
    "from": "検索",
    "to": "YouTube",
-   "v": 9
+   "v": 274
   },
   {
    "from": "登録者",
    "to": "YouTube",
-   "v": 8
+   "v": 80
   },
   {
    "from": "SHORTS_CONTENT_LINKS",
    "to": "YouTube",
-   "v": 2
+   "v": 8
   },
   {
    "from": "外部サイト",
+   "to": "YouTube",
+   "v": 8
+  },
+  {
+   "from": "PLAYLIST",
+   "to": "YouTube",
+   "v": 7
+  },
+  {
+   "from": "関連動画",
+   "to": "YouTube",
+   "v": 5
+  },
+  {
+   "from": "SOUND_PAGE",
+   "to": "YouTube",
+   "v": 3
+  },
+  {
+   "from": "ハッシュタグ",
+   "to": "YouTube",
+   "v": 2
+  },
+  {
+   "from": "その他",
    "to": "YouTube",
    "v": 1
   },
   {
    "from": "YouTube",
    "to": "チャンネルページ",
-   "v": 0
+   "v": 60
   },
   {
    "from": "チャンネルページ",
