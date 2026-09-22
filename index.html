@@ -124,6 +124,48 @@ p{margin:0}
 .echo-tip{position:absolute;pointer-events:none;background:#0c1322;color:#fff;font-size:12px;padding:6px 9px;border-radius:6px;opacity:0;transition:opacity .15s;white-space:nowrap;font-family:"IBM Plex Mono",monospace}
 @media (max-width:560px){.echo-box{height:340px}.echo-box.flow{height:230px}}
 
+
+/* ===== W91（2026-09-22）A2：帳簿を整える ===== */
+body{font-size:16px}
+.mast{position:sticky;top:0;z-index:5;background:var(--bg);padding:14px 0 10px;border-bottom:1px solid var(--rule-2)}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:26px}
+.tile{background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:10px 12px 8px}
+.tile .k{display:block;font-size:12.5px;color:var(--ink-3)}
+.tile .v{font-size:30px;line-height:1.15;animation:rise .5s ease-out both}
+.tile .v small{font-size:14px;margin-left:2px;color:var(--ink-2)}
+@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.tile .v{animation:none}}
+.hl{background:linear-gradient(transparent 62%,#f6c44588 62%)}
+.today{display:block;position:relative;border-radius:12px;overflow:hidden;background:var(--navy);box-shadow:0 6px 18px rgba(12,19,34,.16)}
+.today img{width:100%;aspect-ratio:16/10;border-radius:0;object-fit:cover;display:block}
+.today .cap{position:absolute;left:0;right:0;bottom:0;padding:40px 14px 12px;background:linear-gradient(transparent,rgba(0,0,0,.8));color:#fff}
+.today .t{font-size:17px;color:#fff}.today .s{color:#d7dbe3}.today .go{color:#fff}
+.h2{font-size:20px;font-weight:700;border-left:6px solid var(--brand);padding-left:9px;line-height:1.35}
+.sub{font-size:13px;color:var(--ink-3);margin-top:-4px}
+.wk{background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:14px 10px 10px}
+.wkbars{display:grid;gap:8px;align-items:end}
+.wkbar{display:flex;flex-direction:column;align-items:stretch;min-width:28px}
+.wkbar .bv{font-size:13px;text-align:center;font-weight:500}
+.wkbar .bt{height:150px;display:flex;align-items:flex-end}
+.wkbar .bt i{display:block;width:100%;background:var(--ink);border-radius:4px 4px 0 0}
+.wkbar.cur .bt i{background:var(--brand)}.wkbar.cur .bv{background:var(--brand);color:var(--brand-ink);border-radius:4px}
+.wkbar .bl{font-size:12px;color:var(--ink-3);text-align:center;margin-top:4px;line-height:1.35}
+.wkbar .btop{font-size:12px;line-height:1.35;margin-top:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.wkdet{margin-top:10px}.wkdet summary{cursor:pointer;font-size:13.5px;font-weight:700}
+.wkdet ul{list-style:none;margin:6px 0 0;padding:0}.wkdet li{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;padding:5px 0;border-bottom:1px solid var(--rule-2)}
+.cards{display:flex;flex-direction:column;gap:10px}
+.card{display:grid;grid-template-columns:58px minmax(0,1fr);gap:12px;background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:12px}
+.card .cd{background:var(--navy);color:var(--brand);border-radius:6px;height:26px;font-size:13px;line-height:26px;text-align:center}
+.card p{font-size:15px;line-height:1.6;margin-bottom:4px}.card p b{display:block;font-size:12px;color:var(--ink-3);font-weight:500}
+.card p.key{background:#fff4c9;border-radius:6px;padding:2px 6px;margin-left:-6px}
+.more5{font-size:13.5px}
+.cta1{font-size:14px;margin-top:4px}.cta1 a{font-weight:700;text-decoration:none;border-bottom:2px solid var(--brand)}
+.pls{display:flex;flex-direction:column;gap:8px}.pls a{display:block;padding:12px 14px;background:var(--paper);border:1px solid var(--rule);border-radius:10px;font-weight:700;text-decoration:none}
+@media (prefers-color-scheme:dark){
+ :root{--bg:#14161b;--paper:#1c1f26;--ink:#f1efe8;--ink-2:#b9bcc4;--ink-3:#9097a3;--rule:#2e323b;--rule-2:#262a32;--navy:#0c1322}
+ .wkbar .bt i{background:#aab1bf}.card p.key{background:#3a3212}.today{background:#000}
+ .hire{background:#0c1322;border:1px solid #2e323b}
+}
 </style>
 </head>
 <body>
@@ -141,15 +183,15 @@ p{margin:0}
   <!-- ===== 見出し ===== -->
   <section class="lead" id="growth">
     <h1>AIに仕組みを作らせて<br>1日15分で稼げるか、<br>いま <span class="mono n" id="g-day">—</span> 日目。</h1>
-    <p class="muted">30代会社員のSnapが、2026年8月28日にひとりで始めました。朝7時と夜7時に1本ずつ、週に1本はAIへの報告会。<strong>数字も失敗も、全部そのまま出します。</strong></p>
+    <p class="muted">30代会社員のSnapが、2026年8月28日にひとりで始めました。朝7時と夜7時に1本ずつ、週に1本はAIへの報告会。<strong>数字も失敗も、<span class="hl">全部そのまま出します。</span>売上がゼロの日も。</strong></p>
   </section>
 
-  <div class="ledger" aria-label="帳簿">
-    <div class="row"><span class="k">Day</span><span class="mono v" id="g-day2">—</span></div>
-    <div class="row"><span class="k">累計売上</span><span class="mono v" id="g-sales">—</span></div>
-    <div class="row"><span class="k">固定費線（月）</span><span class="mono v" id="g-fixed">—</span></div>
+  <div class="tiles" aria-label="帳簿">
+    <div class="tile"><span class="k">Day</span><span class="mono v" id="g-day2">—</span></div>
+    <div class="tile"><span class="k">累計売上</span><span class="mono v"><span id="g-sales">—</span><small>円</small></span></div>
+    <div class="tile"><span class="k">登録者</span><span class="mono v"><span id="g-subs2">—</span><small>人</small></span></div>
   </div>
-  <p class="small" style="margin-top:8px">毎朝の動画は、この3行から始まります。<strong>売上が固定費線を超えた日</strong>が、この実験の合格ラインです。</p>
+  <p class="small" style="margin-top:8px">固定費線（月）<span class="mono" id="g-fixed">—</span>。<strong>売上がこの線を超えた日</strong>が、この実験の合格ラインです。</p>
 
   <div class="ledger" aria-label="今日の数字">
     <div class="row"><span class="k">投稿した動画</span><span class="mono v" id="g-posted">—</span></div>
@@ -170,25 +212,44 @@ p{margin:0}
     <span class="label">今日の1本</span>
     <a class="today" id="g-today" href="#" rel="noopener" target="_blank" hidden>
       <img id="g-today-img" alt="" loading="lazy">
-      <div><div class="t" id="g-today-t"></div><div class="s" id="g-today-s"></div><span class="go">YouTubeで見る</span></div>
+      <div class="cap"><div class="t" id="g-today-t"></div><div class="s" id="g-today-s"></div><span class="go">YouTubeで見る</span></div>
     </a>
     <p class="small" id="g-tomorrow" hidden></p>
+    <p class="cta1">これを一緒に作りたい方は → <a href="mailto:getsnapknow@gmail.com?subject=%E4%B8%80%E7%B7%92%E3%81%AB%E4%BD%9C%E3%82%8A%E3%81%9F%E3%81%84">メール</a></p>
   </section>
 
-  <section class="section">
-    <span class="label">動画ごとの再生数（左が古い・濃い棒は自分の声）</span>
-    <div class="bars" id="g-bars"></div>
+  <section class="section" id="weeks">
+    <h2 class="h2">週ごとの再生</h2>
+    <p class="sub">合計 <span class="mono" id="g-wk-total">—</span>回・<span class="mono" id="g-wk-n">—</span>本（棒の下はその週いちばん見られた1本）</p>
+    <div class="wk"><div class="wkbars" id="g-wk"></div></div>
+    <div id="g-wkdet"></div>
+    <p class="cta1">これを一緒に作りたい方は → <a href="mailto:getsnapknow@gmail.com?subject=%E4%B8%80%E7%B7%92%E3%81%AB%E4%BD%9C%E3%82%8A%E3%81%9F%E3%81%84">メール</a></p>
+  </section>
+
+  <section class="section" id="changes">
+    <h2 class="h2">視聴者に言われて変えたこと</h2>
+    <div class="cards" id="g-changes"></div>
+    <p class="cta1">これを一緒に作りたい方は → <a href="mailto:getsnapknow@gmail.com?subject=%E4%B8%80%E7%B7%92%E3%81%AB%E4%BD%9C%E3%82%8A%E3%81%9F%E3%81%84">メール</a></p>
+  </section>
+
+  <section class="section" id="lessons">
+    <h2 class="h2">AIへの指示の学び</h2>
+    <p class="sub">言ったこと → 言えばよかったこと → AIが直したこと</p>
+    <div class="cards" id="g-lessons"></div>
+    <p class="cta1">これを一緒に作りたい方は → <a href="mailto:getsnapknow@gmail.com?subject=%E4%B8%80%E7%B7%92%E3%81%AB%E4%BD%9C%E3%82%8A%E3%81%9F%E3%81%84">メール</a></p>
+  </section>
+
+  <section class="section" id="playlists">
+    <h2 class="h2">再生リスト</h2>
+    <div class="pls">
+      <a href="https://www.youtube.com/playlist?list=PLcXP9jS_SA18" rel="noopener" target="_blank">今日の1円ニュース（Snapに起きたこと） →</a>
+      <a href="https://www.youtube.com/playlist?list=PLa1b4_ZURj6A" rel="noopener" target="_blank">AIニュース解説 →</a>
+    </div>
   </section>
 
   <section class="section">
     <span class="label">節目</span>
     <ul class="ms" id="g-ms"></ul>
-  </section>
-
-  <section class="section" id="echo">
-    <span class="label">反響の生きもの（丸の大きさ＝再生数・黄＝自分の声・点線＝まだ繋がっていない場所）</span>
-    <div class="echo-box"><svg id="echo-svg" role="img" aria-label="各プラットフォームの反響を一つの生きものとして描いた図"></svg><div class="echo-tip" id="echo-tip"></div></div>
-    <p class="small" id="echo-note">数字は毎晩の自動更新。TikTok・Instagram は手入力分、Threads・note はまだ繋がっていません。</p>
   </section>
 
   <section class="section" id="flow">
@@ -281,7 +342,7 @@ p{margin:0}
     $('g-day').textContent=p.day; $('g-posted').textContent=n(p.posted); $('g-views').textContent=n(p.total_views);
     // 帳簿の3行（毎朝の動画の冒頭と同じ数字・同じ並び）
     $('g-day2').textContent=p.day;
-    $('g-sales').textContent=n(p.sales||0)+'円';
+    
     $('g-fixed').textContent=n(p.fixed||11400)+'円';
     // 明日の予告（progress.json に tomorrow があるときだけ出す）
     if(p.tomorrow && p.tomorrow.title){
@@ -304,15 +365,22 @@ p{margin:0}
       im.onerror=()=>{im.onerror=null; im.src=thumb2(t.yt)}; im.src=thumb(t.yt); im.alt=t.title;
       $('g-today-t').textContent=t.title;
       $('g-today-s').textContent=(t.blurb||'')+(t.voice==='生声'?'　自分の声で読んだ回。':'')+(t.views?`　${t.views.toLocaleString()}再生（${t.hours}時間）`:''); }
-    // 棒グラフ（細い・紙の上）
-    const W=560,H=140,mx=Math.max(1,...v.map(x=>x.views)),bw=Math.max(8,Math.floor((W-10)/Math.max(1,v.length))-8);
-    let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="動画ごとの再生数">`;
-    s+=`<line x1="0" x2="${W}" y1="${H-22}" y2="${H-22}" stroke="#0c1322" stroke-width="1"/>`;
-    v.forEach((x,i)=>{const h=Math.round((x.views/mx)*(H-46)),X=6+i*(bw+8),Y=H-22-h;
-      s+=`<rect x="${X}" y="${Y}" width="${bw}" height="${h}" fill="${x.voice==='生声'?'#0c1322':'#c9c5b8'}"/>`;
-      s+=`<text x="${X+bw/2}" y="${Y-5}" text-anchor="middle" font-size="10.5" fill="#0c1322" font-family="IBM Plex Mono,monospace">${x.views.toLocaleString()}</text>`;
-      s+=`<text x="${X+bw/2}" y="${H-7}" text-anchor="middle" font-size="9.5" fill="#7d879c" font-family="IBM Plex Mono,monospace">${md(x.date)}</text>`;});
-    $('g-bars').innerHTML=s+'</svg>';
+    // 週ごとの再生（G1・2026-09-22）
+    const st=new Date(p.start+'T00:00:00'); const wk={};
+    v.forEach(x=>{const k=Math.floor((new Date(x.date+'T00:00:00')-st)/864e5/7); (wk[k]=wk[k]||[]).push(x);});
+    const ks=Object.keys(wk).map(Number).sort((a,b)=>a-b), sums=ks.map(k=>wk[k].reduce((a,x)=>a+(x.views||0),0)), mxw=Math.max(1,...sums);
+    const lab=k=>{const d=new Date(st.getTime()+k*7*864e5);return (d.getMonth()+1)+'/'+d.getDate();};
+    $('g-wk').style.gridTemplateColumns='repeat('+ks.length+',minmax(28px,1fr))';
+    $('g-wk').innerHTML=ks.map((k,i)=>{const top=wk[k].slice().sort((a,b)=>b.views-a.views)[0],cur=i===ks.length-1;
+      return `<div class="wkbar${cur?' cur':''}"><div class="bv mono">${n(sums[i])}</div><div class="bt"><i style="height:${Math.round(sums[i]/mxw*100)}%"></i></div><div class="bl">第${k+1}週<br>${lab(k)}〜${cur?'（今週）':''}</div><div class="btop">▲ ${top.title}</div></div>`;}).join('');
+    $('g-wk-total').textContent=n(v.reduce((a,x)=>a+(x.views||0),0)); $('g-wk-n').textContent=v.length;
+    $('g-wkdet').innerHTML=ks.slice().reverse().map(k=>`<details class="wkdet"><summary>第${k+1}週（${lab(k)}〜）の${wk[k].length}本</summary><ul>${wk[k].slice().sort((a,b)=>b.views-a.views).map(x=>`<li><a href="https://www.youtube.com/shorts/${x.yt}" rel="noopener" target="_blank">${x.title}</a><span class="mono">${n(x.views)}</span></li>`).join('')}</ul></details>`).join('');
+    // 視聴者に言われて変えたこと（C1）／AIへの指示の学び（C7）最新5件
+    const card=(d,rows)=>`<div class="card"><div class="cd mono">${d}</div><div>${rows.map(([b,t,key])=>`<p${key?' class="key"':''}><b>${b}</b>${t||'これから'}</p>`).join('')}</div></div>`;
+    const dayOf=ds=>'Day'+(Math.floor((new Date(ds+'T00:00:00')-st)/864e5)+1);
+    $('g-changes').innerHTML=(p.changes||[]).slice(-5).reverse().map(c=>card(dayOf(c.date),[['言われた',c.said],['変えた',c.changed,1],['結果',c.result]])).join('');
+    $('g-lessons').innerHTML=(p.lessons||[]).slice(-5).reverse().map(c=>card(dayOf(c.date),[['言った',c.said],['言えばよかった',c.better,1],['AIが直した',c.ai]])).join('');
+    $('g-subs2').textContent=n(p.subs); $('g-sales').textContent=n(p.sales||0);
     // 一覧（新しい順）
     $('g-grid').innerHTML=v.slice().reverse().slice(0,12).map(x=>
       `<li><a href="https://www.youtube.com/shorts/${x.yt}" rel="noopener" target="_blank">
@@ -329,7 +397,7 @@ p{margin:0}
   if(typeof d3==='undefined') return;
   const COL={YouTube:'#c9402b',TikTok:'#1a1a1a',Instagram:'#c2447a',Threads:'#2a4a8a',note:'#3f9a6e',HP:'#f5c400'};
   const r=v=>6+Math.sqrt(Math.max(v||0,1))*0.72;
-  fetch('progress.json?'+Date.now()).then(r=>r.json()).then(p=>{ drawAmoeba(p); drawFlow(p); }).catch(()=>{});
+  fetch('progress.json?'+Date.now()).then(r=>r.json()).then(p=>{ drawFlow(p); }).catch(()=>{});
 
   function drawAmoeba(p){
     const box=document.querySelector('#echo .echo-box'), svg=d3.select('#echo-svg'), tip=document.getElementById('echo-tip');
@@ -397,7 +465,7 @@ p{margin:0}
     const top=flows.find(f=>f.to==='YouTube'), tot=flows.filter(f=>f.to==='YouTube').reduce((s,f)=>s+(f.v||0),0), ch=flows.find(f=>f.to==='チャンネルページ');
     document.getElementById('flow-note').textContent=`${p.platforms&&p.platforms.flows_as_of?p.platforms.flows_as_of+'時点。':''}${top?Math.round(100*top.v/Math.max(1,tot))+'%が「'+top.from+'」から。':''}チャンネルページまで来たのは${ch?ch.v:0}人、HPの訪問は計測していません、問い合わせは0。この線が太くなる日を、ここに残します。`;
   }
-  window.addEventListener('resize',()=>{ clearTimeout(window.__echoT); window.__echoT=setTimeout(()=>fetch('progress.json?'+Date.now()).then(r=>r.json()).then(p=>{drawAmoeba(p);drawFlow(p);}),300); });
+  window.addEventListener('resize',()=>{ clearTimeout(window.__echoT); window.__echoT=setTimeout(()=>fetch('progress.json?'+Date.now()).then(r=>r.json()).then(p=>{drawFlow(p);}),300); });
 })();
 </script>
 
