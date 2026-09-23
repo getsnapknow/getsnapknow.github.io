@@ -1,6 +1,6 @@
 {
- "updated": "2026-09-23",
- "day": 27,
+ "updated": "2026-09-24",
+ "day": 28,
  "start": "2026-08-28",
  "videos": [
   {
@@ -483,9 +483,22 @@
    "voice": "生声",
    "tt": 0,
    "ig": 0
+  },
+  {
+   "id": "SK045",
+   "date": "2026-09-23",
+   "views": 0,
+   "yt": "h8p9C-SbSjM",
+   "title": "AIに頼んだ買い物が、アマゾンで止められました。",
+   "blurb": "",
+   "hours": 0,
+   "rate": null,
+   "voice": "生声",
+   "tt": 0,
+   "ig": 0
   }
  ],
- "posted": 37,
+ "posted": 38,
  "total_views": 31300,
  "subs": 11,
  "subs_goal": 1000,
@@ -660,9 +673,5 @@
  "note_latest": {
   "title": "AIの台本を3回ボツにして、番組を始めて、初日で自分の決めた線に当たった週",
   "url": "https://note.com/snapknow/n/n9f8d806d884d"
- },
- "slots": {
-  "label": "水・日 21:00〜",
-  "left": 2
  }
 }
