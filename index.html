@@ -167,6 +167,28 @@ body{font-size:16px}
  .wkbar .bt i{background:#aab1bf}.card p.key{background:#3a3212}.today{background:#000}
  .hire{background:#0c1322;border:1px solid #2e323b}
 }
+
+/* ===== 案 2026-09-26 ===== */
+.short{display:block;margin-top:22px;padding:16px 18px;border-radius:6px;background:var(--navy);color:#eef2f9;text-decoration:none}
+.short .k{display:block;font-size:12px;color:var(--brand);letter-spacing:.08em}
+.short b{display:block;font-size:16px;line-height:1.55;margin-top:2px}
+.short .p{display:block;font-size:13px;color:#c3ccdd;margin-top:6px}
+.short .p .mono{color:var(--brand);font-weight:700;font-size:16px}
+.dock{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;display:flex;justify-content:space-between;align-items:center;gap:10px;
+  padding:13px 16px;border-radius:6px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:700;font-size:14px;
+  box-shadow:0 6px 20px rgba(12,19,34,.25);transform:translateY(140%);transition:transform .25s}
+.dock.on{transform:none}
+@media(min-width:720px){.dock{left:auto;right:24px;width:320px}}
+.funnel{list-style:none;margin:12px 0 0;padding:0;display:none}
+.funnel li{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:10px 0;border-bottom:1px solid var(--rule-2)}
+.funnel .nm{font-size:14px}.funnel .vv{font-size:18px;font-weight:700;text-align:right}
+.funnel .bar{grid-column:1/-1;height:8px;border-radius:4px;background:var(--rule-2);overflow:hidden}
+.funnel .bar i{display:block;height:100%;background:var(--ink)}
+.funnel li.pending .vv{font-size:13px;color:var(--ink-3);font-weight:600}
+.funnel li.pending .bar i{background:repeating-linear-gradient(45deg,var(--brand) 0 6px,transparent 6px 12px)}
+.funnel .rt{grid-column:1/-1;font-size:12px;color:var(--ink-3)}
+@media(max-width:600px){#flow .echo-box{display:none}.funnel{display:block}}
+.today .cap{position:static;padding:12px 14px 14px;background:var(--navy)}
 </style>
 </head>
 <body>
@@ -200,9 +222,12 @@ body{font-size:16px}
     <div class="row"><span class="k">チャンネル登録者</span><span class="mono v"><span id="g-subs">—</span><small>/ 1,000</small></span></div>
     <div class="row"><span class="k">決めたこと</span><span class="mono v" id="g-dec">—</span></div>
     <div class="row"><span class="k">やり直したこと</span><span class="mono v" id="g-stum">—</span></div>
+    <div class="row"><span class="k">このページが開かれた回数（今週）</span><span class="mono v" id="g-hp">—</span></div>
     <div class="row"><span class="k">受託の受注（件）</span><span class="mono v" id="g-orders">—</span></div>
   </div>
   <p class="small" style="margin-top:8px">登録者1,000人で、次の段階（企業からの制作依頼）が開きます。更新：<span id="g-upd">—</span></p>
+
+  <a class="short" href="#hire"><span class="k">一緒にやる</span><b>あなたの「毎日の面倒」を1つ、60分でAIに任せる。</b><span class="p"><span class="mono">5,000円</span>・オンライン・ココナラで受付 →</span></a>
 
   <section class="section">
     <span class="label">今週のつまずき</span>
@@ -216,7 +241,6 @@ body{font-size:16px}
       <div class="cap"><div class="t" id="g-today-t"></div><div class="s" id="g-today-s"></div><span class="go">YouTubeで見る</span></div>
     </a>
     <p class="small" id="g-tomorrow" hidden></p>
-    <p class="cta1">これを一緒に作りたい方は → <a href="mailto:getsnapknow@gmail.com?subject=%E4%B8%80%E7%B7%92%E3%81%AB%E4%BD%9C%E3%82%8A%E3%81%9F%E3%81%84">メール</a></p>
   </section>
 
   <section class="section" id="weeks">
@@ -224,20 +248,17 @@ body{font-size:16px}
     <p class="sub">合計 <span class="mono" id="g-wk-total">—</span>回・<span class="mono" id="g-wk-n">—</span>本（棒の下はその週いちばん見られた1本）</p>
     <div class="wk"><div class="wkbars" id="g-wk"></div></div>
     <div id="g-wkdet"></div>
-    <p class="cta1">これを一緒に作りたい方は → <a href="mailto:getsnapknow@gmail.com?subject=%E4%B8%80%E7%B7%92%E3%81%AB%E4%BD%9C%E3%82%8A%E3%81%9F%E3%81%84">メール</a></p>
   </section>
 
   <section class="section" id="changes">
     <h2 class="h2">視聴者に言われて変えたこと</h2>
     <div class="cards" id="g-changes"></div>
-    <p class="cta1">これを一緒に作りたい方は → <a href="mailto:getsnapknow@gmail.com?subject=%E4%B8%80%E7%B7%92%E3%81%AB%E4%BD%9C%E3%82%8A%E3%81%9F%E3%81%84">メール</a></p>
   </section>
 
   <section class="section" id="lessons">
     <h2 class="h2">AIへの指示の学び</h2>
     <p class="sub">言ったこと → 言えばよかったこと → AIが直したこと</p>
     <div class="cards" id="g-lessons"></div>
-    <p class="cta1">これを一緒に作りたい方は → <a href="mailto:getsnapknow@gmail.com?subject=%E4%B8%80%E7%B7%92%E3%81%AB%E4%BD%9C%E3%82%8A%E3%81%9F%E3%81%84">メール</a></p>
   </section>
 
   <section class="section" id="playlists">
@@ -254,8 +275,9 @@ body{font-size:16px}
   </section>
 
   <section class="section" id="flow">
-    <span class="label">人はどこから来て、どこで止まっているか（太さ＝人数・YouTube の集計は約2日遅れ）</span>
+    <span class="label">人はどこから来て、どこで止まっているか（YouTube の集計は約2日遅れ）</span>
     <div class="echo-box flow"><svg id="flow-svg" role="img" aria-label="流入元から問い合わせまでの人の流れ"></svg></div>
+    <ol class="funnel" id="funnel"></ol>
     <p class="small" id="flow-note">—</p>
   </section>
 
@@ -263,7 +285,7 @@ body{font-size:16px}
   <section class="section" id="note">
     <span class="label">週ごとの記録（note）</span>
     <p>動画に入らなかったこと——なぜそう判断したか、何回やり直したか、どこでつまずいたか——は、週に1本の記事にまとめています。</p>
-    <a class="more" id="g-note" href="https://note.com/snapknow" rel="noopener" target="_blank">noteで読む</a>
+    <a class="more" id="g-note" href="go/note.html" rel="noopener" target="_blank">noteで読む</a>
   </section>
 
   <!-- ===== 受託 ===== -->
@@ -277,7 +299,7 @@ body{font-size:16px}
       <li>実績はまだ<span class="mono" id="t-orders">0</span>件。だから上の数字を隠しません。<span class="mono" id="t-stum">—</span>回やり直しました</li>
     </ul>
     <div class="price"><span class="mono big">5,000円</span><span class="u">／60分（税込・オンライン）</span></div>
-    <a class="cta" href="https://coconala.com/services/4414017" target="_blank" rel="noopener">ココナラで申し込む（60分 5,000円）</a>
+    <a class="cta" href="go/coconala.html" target="_blank" rel="noopener">ココナラで申し込む（60分 5,000円）</a>
     <a class="cta ghost" href="mailto:getsnapknow@gmail.com?subject=%E7%9B%B8%E8%AB%87">先に聞きたいことをメールする（無料）</a>
     <p class="fine">できること：ニュースの要約を毎朝届ける／台帳や日報の自動化／投稿文の下書き／その他、繰り返しの作業。<br>できないこと：稼げる保証、投資や副業の勧誘、実写の撮影・編集。<br><strong>お申し込みと決済はココナラで承ります</strong>（このページでは受け付けません）。<br>getsnapknow@gmail.com ／ 通常24時間以内に返信します</p>
   </section>
@@ -286,7 +308,7 @@ body{font-size:16px}
   <section class="section" id="videos" style="margin-top:48px">
     <span class="label">これまでの動画</span>
     <ul class="eps" id="g-grid"></ul>
-    <a class="more" href="https://www.youtube.com/@getsnapknow" rel="noopener" target="_blank">すべての動画を見る（YouTube）</a>
+    <a class="more" href="go/youtube.html" rel="noopener" target="_blank">すべての動画を見る（YouTube）</a>
   </section>
 
   <!-- ===== 運営者 ===== -->
@@ -321,12 +343,14 @@ body{font-size:16px}
   <section class="section" style="margin-top:40px">
     <span class="label">フォロー</span>
     <nav class="follow" aria-label="SNSアカウント">
-      <a href="https://www.youtube.com/@getsnapknow" rel="noopener" target="_blank">YouTube</a>
+      <a href="go/youtube.html" rel="noopener" target="_blank">YouTube</a>
       <a href="https://www.tiktok.com/@getsnapknow" rel="noopener" target="_blank">TikTok</a>
       <a href="https://www.instagram.com/getsnapknow/" rel="noopener" target="_blank">Instagram</a>
     </nav>
     <p class="small" style="margin-top:6px">運営：Snapknow（個人事業）／ お問い合わせ：getsnapknow@gmail.com</p>
   </section>
+
+  <a class="dock" id="dock" href="#hire"><span>60分で一緒にAIに任せる</span><b class="mono">5,000円 →</b></a>
 
   <footer class="foot">
     <span class="mark">SNAPKNOW</span>
@@ -353,7 +377,7 @@ body{font-size:16px}
     }
     // note の最新記事
     if(p.note_latest && p.note_latest.url){
-      const a=$('g-note'); a.href=p.note_latest.url;
+      const a=$('g-note');
       if(p.note_latest.title) a.textContent=p.note_latest.title+'（noteで読む）';
     }
     $('g-subs').textContent=n(p.subs); $('g-dec').textContent=n(p.decisions); $('g-stum').textContent=n(p.stumbles);
@@ -383,6 +407,21 @@ body{font-size:16px}
     $('g-changes').innerHTML=(p.changes||[]).slice(-5).reverse().map(c=>card(dayOf(c.date),[['言われた',c.said],['変えた',c.changed,1],['結果',c.result]])).join('');
     $('g-lessons').innerHTML=(p.lessons||[]).slice(-5).reverse().map(c=>card(dayOf(c.date),[['言った',c.said],['言えばよかった',c.better,1],['AIが直した',c.ai]])).join('');
     $('g-subs2').textContent=n(p.subs); $('g-sales').textContent=n(p.sales||0);
+
+    // ===== 案：このページに来た人／縦の段 =====
+    if(p.hp_week!=null){$('g-hp').textContent=n(p.hp_week)+'回';}else{$('g-hp').innerHTML='<small style="font-size:13px">9/25から計測中</small>';}
+    (function(){
+      const f=p.flows||[], yt=f.filter(x=>x.to==='YouTube').reduce((a,x)=>a+(x.v||0),0);
+      const g=(a,b)=>{const x=f.find(y=>y.from===a&&y.to===b);return x?x.v:null;};
+      const since=(p.hp_since||'2026-09-25').slice(5).replace('-','/').replace(/^0/,'');
+      const hp=p.hp_total!=null?p.hp_total:null, go=(p.hp_go||{}).coconala;
+      const st=[['ショートが再生された',yt,'回'],['チャンネルページが開かれた',g('YouTube','チャンネルページ'),'回'],
+        [`このページが開かれた（${since}〜）`,hp,'回'],[`申込みページ（ココナラ）へ進んだ（${since}〜）`,hp!=null?(go||0):null,'回'],['問い合わせ',g('HP','問い合わせ'),'件']];
+      const lg=v=>v>0?Math.log10(v+1)/Math.log10(yt+1):0;
+      $('funnel').innerHTML=st.map(([nm,v,u],i)=>{
+        const prev=i?st[i-1][1]:null, same=(i===1||i===3), rt=(same&&prev&&v!=null)?`前の段から ${(v/prev*100).toFixed(v/prev<0.01?2:1)}%`:'';
+        return `<li class="${v==null?'pending':''}"><span class="nm">${nm}</span><span class="vv mono">${v==null?since+'から計測中':n(v)+u}</span><span class="bar"><i style="width:${v==null?100:Math.max(2,Math.round(lg(v)*100))}%"></i></span>${rt?`<span class="rt">${rt}</span>`:''}</li>`;}).join('');
+    })();
     // 一覧（新しい順）
     $('g-grid').innerHTML=v.slice().reverse().slice(0,12).map(x=>
       `<li><a href="https://www.youtube.com/shorts/${x.yt}" rel="noopener" target="_blank">
@@ -390,6 +429,16 @@ body{font-size:16px}
          <span><span class="tt">${x.title}</span><br><span class="dd mono">${md(x.date)}${x.voice==='生声'?' <span class="voice">· 自分の声</span>':''}</span></span>
          <span class="vv mono">${x.views.toLocaleString()}</span></a></li>`).join('');
   }).catch(()=>{ $('g-day').textContent=''; });
+})();
+</script>
+
+<script>
+(function(){ // 案：見出しを過ぎたら下に申込みボタン、申込み欄が見えたら隠す
+  const d=document.getElementById('dock'), lead=document.getElementById('growth'), hire=document.getElementById('hire');
+  if(!d||!('IntersectionObserver' in window)) return;
+  let pastLead=false, hireVis=false; const upd=()=>d.classList.toggle('on',pastLead&&!hireVis);
+  new IntersectionObserver(e=>{pastLead=!e[0].isIntersecting&&e[0].boundingClientRect.top<0;upd();}).observe(lead);
+  new IntersectionObserver(e=>{hireVis=e[0].isIntersecting;upd();},{threshold:.05}).observe(hire);
 })();
 </script>
 <script src="d3.min.js"></script>
@@ -457,7 +506,7 @@ body{font-size:16px}
     flows.forEach(f=>{ const a=pos[f.from], b=pos[f.to]; if(!a||!b)return; const path=d3.path(); path.moveTo(a.x,a.y); path.bezierCurveTo((a.x+b.x)/2,a.y,(a.x+b.x)/2,b.y,b.x,b.y);
       g.append('path').attr('d',path.toString()).attr('fill','none').attr('stroke',f.v?'#b9b7b0':'#e2e0d9').attr('stroke-width',sw(f.v)).attr('stroke-dasharray',f.v?'8 6':'2 6').attr('class','fl');
       g.append('text').attr('x',(a.x+b.x)/2).attr('y',(a.y+b.y)/2-8-sw(f.v)/2).attr('text-anchor','middle').attr('font-size',small?10:11).attr('fill','#7d879c').attr('font-family','IBM Plex Mono,monospace')
-        .text(f.v==null?'計測なし':(f.v.toLocaleString()+'人')); });
+        .text(f.v==null?'計測中':(f.v.toLocaleString()+(f.to==='問い合わせ'?'件':'回'))); });
     // 図の説明は下の文で（短い名前の対応）
     Object.entries(pos).forEach(([n,q])=>{ const lbl=SHORT[n]||n, fs=small?10:11.5, w=Math.max(44,lbl.length*(small?10.5:12)+16);
       g.append('rect').attr('x',q.x-w/2).attr('y',q.y-15).attr('width',w).attr('height',30).attr('rx',15).attr('fill',n==='HP'?'#f5c400':n==='YouTube'?'#c9402b':'#0c1322');
@@ -465,7 +514,7 @@ body{font-size:16px}
     let off=0; const tick=()=>{ off-=0.5; g.selectAll('path.fl').attr('stroke-dashoffset',off); }; const tm=d3.timer(tick);
     if('IntersectionObserver' in window){ new IntersectionObserver(es=>{ es[0].isIntersecting?tm.restart(tick):tm.stop(); },{threshold:.05}).observe(box); }
     const top=flows.find(f=>f.to==='YouTube'), tot=flows.filter(f=>f.to==='YouTube').reduce((s,f)=>s+(f.v||0),0), ch=flows.find(f=>f.to==='チャンネルページ');
-    document.getElementById('flow-note').textContent=`${p.platforms&&p.platforms.flows_as_of?p.platforms.flows_as_of+'時点。':''}${top?Math.round(100*top.v/Math.max(1,tot))+'%が「'+top.from+'」から。':''}チャンネルページまで来たのは${ch?ch.v:0}人、HPの訪問は計測していません、問い合わせは0。この線が太くなる日を、ここに残します。`;
+    document.getElementById('flow-note').textContent=`${p.platforms&&p.platforms.flows_as_of?p.platforms.flows_as_of+'時点。':''}${top?Math.round(100*top.v/Math.max(1,tot))+'%が「'+top.from+'」から。':''}チャンネルページが開かれたのは${ch?ch.v:0}回。このページは${p.hp_total!=null?'9/25から'+p.hp_total+'回開かれ':'9/25から数え始め'}ました。問い合わせは0。この線が太くなる日を、ここに残します。`;
   }
   window.addEventListener('resize',()=>{ clearTimeout(window.__echoT); window.__echoT=setTimeout(()=>fetch('progress.json?'+Date.now()).then(r=>r.json()).then(p=>{drawFlow(p);}),300); });
 })();
