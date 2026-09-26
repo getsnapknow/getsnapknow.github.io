@@ -230,7 +230,7 @@ body{font-size:16px}
   <!-- ===== 見出し ===== -->
   <section class="lead" id="growth">
     <h1>AIに仕組みを作らせて<br>1日15分で稼げるか、<br>いま <span class="mono n" id="g-day">—</span> 日目。</h1>
-    <p class="muted">30代会社員のSnapが、2026年8月28日にひとりで始めました。朝7時と夜7時に1本ずつ、週に1本はAIへの報告会。<strong>数字も失敗も、<span class="hl">全部そのまま出します。</span>売上がゼロの日も。</strong></p>
+    <p class="muted">30代会社員のSnapが、2026年8月28日にひとりで始めました。ショートは朝7時と夜7時。本編『AIの言う通りにしてみた』は毎週木曜の夜。<strong>数字も失敗も、<span class="hl">全部そのまま出します。</span>売上がゼロの日も。</strong></p>
   </section>
 
   <div class="tiles" aria-label="帳簿">
@@ -290,6 +290,7 @@ body{font-size:16px}
     <div class="pls">
       <a href="https://www.youtube.com/playlist?list=PLcXP9jS_SA18" rel="noopener" target="_blank">今日の1円ニュース（Snapに起きたこと） →</a>
       <a href="https://www.youtube.com/playlist?list=PLa1b4_ZURj6A" rel="noopener" target="_blank">AIニュース解説 →</a>
+      <a href="https://www.youtube.com/playlist?list=PLLbZ2NpOK8Kg" rel="noopener" target="_blank">AIの言う通りにしてみた｜毎週の実録（本編） →</a>
     </div>
   </section>
 
@@ -343,7 +344,7 @@ body{font-size:16px}
   <section class="section me" style="margin-top:48px">
     <span class="label">運営者</span>
     <div class="who"><b>Snap</b><span class="small">Snapknow</span></div>
-    <p>30代の会社員です。2026年8月28日に、ひとりで始めました。AIに仕組みを作らせて、1日15分で稼げるかを試しています。朝7時は自分の帳簿から始める『今日の1円ニュース』、夜7時はAIニュースの解説、週に1本はAIへの報告会。</p>
+    <p>30代の会社員です。2026年8月28日に、ひとりで始めました。AIに仕組みを作らせて、1日15分で稼げるかを試しています。朝7時は自分の帳簿から始める『今日の1円ニュース』、夜7時はAIニュースの解説。本編『AIの言う通りにしてみた』は毎週木曜の夜。</p>
     <ul>
       <li><strong>専門家ではありません。</strong>AIを追いかけている、ふつうの人間です。だから「専門用語を使わない」を方針にしています。</li>
       <li><strong>ナレーションは自分の声です。</strong>2026年9月2日から、合成音声をやめて自分で読んでいます（それ以前の動画は合成音声です）。</li>
@@ -374,6 +375,10 @@ body{font-size:16px}
       <a href="go/youtube.html" rel="noopener" target="_blank">YouTube</a>
       <a href="https://www.tiktok.com/@getsnapknow" rel="noopener" target="_blank">TikTok</a>
       <a href="https://www.instagram.com/getsnapknow/" rel="noopener" target="_blank">Instagram</a>
+      <a href="https://www.threads.com/@getsnapknow" rel="noopener" target="_blank">Threads</a>
+      <a href="https://x.com/getsnapknow" rel="noopener" target="_blank">X</a>
+      <a href="https://note.com/snapknow" rel="noopener" target="_blank">note</a>
+      <a href="go/line.html" rel="noopener" target="_blank">LINE</a>
     </nav>
     <p class="small" style="margin-top:6px">運営：Snapknow（個人事業）／ お問い合わせ：getsnapknow@gmail.com</p>
   </section>
@@ -441,10 +446,10 @@ body{font-size:16px}
     (function(){ // 流入の図v2（W131・2026-09-26）
       const f=p.flows||[], pl=p.platforms||{}, g=(a,b)=>{const x=f.find(y=>y.from===a&&y.to===b);return x?x.v:null;};
       const since=(p.hp_since||'2026-09-25').slice(5).replace('-','/').replace(/^0/,'');
-      const src=[['YouTube',pl.youtube],['TikTok',pl.tiktok,'9/18まで'],['Instagram',pl.instagram],['note',null],['X・Threads',null],['LINE',null,null,1]];
+      const src=[['YouTube',pl.youtube],['TikTok',pl.tiktok,'9/18まで'],['Instagram',pl.instagram],['note',null],['X・Threads',null],['LINE',null,null,'9/26開設']];
       const lg=v=>Math.log10(Math.max(1,v)+1), smax=Math.max(...src.filter(x=>x[1]!=null).map(x=>x[1]),1);
       $('fl-src').innerHTML=src.map(([nm,v,memo,nw],i)=>{const off=v==null,w=off?100:Math.max(3,100*lg(v)/lg(smax));
-        return `<div class="src${off?' off':''}"><span class="n">${nm}${nw?'<span class="tag">準備中</span>':''}</span><span class="track">${off?'':`<span class="fill" style="width:${w}%;animation-delay:${i*80}ms"></span>`}</span><span class="v mono">${off?'計測なし':n(v)+'回'}</span></div>`;}).join('');
+        return `<div class="src${off?' off':''}"><span class="n">${nm}${nw?`<span class="tag">${nw===1?'準備中':nw}</span>`:''}</span><span class="track">${off?'':`<span class="fill" style="width:${w}%;animation-delay:${i*80}ms"></span>`}</span><span class="v mono">${off?'計測なし':n(v)+'回'}</span></div>`;}).join('');
       const tot=src.reduce((a,x)=>a+(x[1]||0),0);
       $('fl-srcfoot').textContent=`${Math.round(100*(pl.youtube||0)/Math.max(1,tot))}%がYouTube（${(pl.flows_as_of||p.updated||'')}時点）。TikTokとInstagramは台帳に手で入れた数。`;
       const seen=(pl.youtube||0)+(pl.tiktok||0)+(pl.instagram||0);
