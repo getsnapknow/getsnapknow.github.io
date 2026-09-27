@@ -213,6 +213,32 @@ body{font-size:16px}
 #flow .drop.worst .t{background:#c9402b;color:#fff;border-radius:5px;padding:0 6px;font-size:11px;margin-left:4px}
 @keyframes flgrow{from{transform:scaleX(0)}}
 @media (prefers-reduced-motion:reduce){#flow .fill,#flow .bar{animation:none}}
+
+/* ===== 地図M（W95・2026-09-27）：作業／反響／課題の3島 ===== */
+.mp-leg{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;color:var(--ink-2);line-height:1.6}
+.mp-leg span{display:inline-flex;align-items:center;gap:5px}
+.mp-leg i{display:inline-block;width:12px;height:12px;border-radius:50%;flex:none}
+.mp-leg .k-w{background:var(--ink)}.mp-leg .k-e{background:var(--paper);border:1.5px solid var(--ink)}
+.mp-leg .k-i{border:1.5px dashed var(--ink-3)}.mp-leg .k-n{border:3px solid var(--brand);width:14px;height:14px}
+.mp-leg .k-b{width:18px;height:0;border-radius:0;border-top:3px solid var(--brand)}
+.mp-box{background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:6px 0}
+.mp-box svg{display:block;width:100%;height:auto}
+#mp-svg .it{font-size:13px;font-weight:700;fill:var(--ink-2)}
+#mp-svg text.is{font-size:12px;font-weight:500;fill:var(--ink-3)}
+#mp-svg text{font-family:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif;font-size:12px;font-weight:700}
+#mp-svg .w circle{fill:var(--ink)} #mp-svg .w text.in{fill:var(--bg)}
+#mp-svg .e circle{fill:var(--paper);stroke:var(--ink);stroke-width:1.5} #mp-svg .e text.in{fill:var(--ink)}
+#mp-svg .i circle{fill:none;stroke:var(--ink-3);stroke-width:1.5;stroke-dasharray:4 3} #mp-svg .i text.in{fill:var(--ink-2)}
+#mp-svg circle.ring{fill:none;stroke:var(--brand);stroke-width:4;stroke-dasharray:none}
+#mp-svg text.out{fill:var(--ink)} #mp-svg line.ld{stroke:var(--ink-3);stroke-width:1}
+#mp-svg path.br{fill:none;stroke:var(--brand);stroke-width:3;stroke-linecap:round}
+.mp-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:4px}
+.mp-cols h3{margin:0 0 4px;font-size:13px;color:var(--ink-3);font-weight:700}
+.mp-cols ul{list-style:none;margin:0;padding:0}
+.mp-cols li{display:flex;justify-content:space-between;gap:6px;font-size:14px;padding:4px 0;border-bottom:1px solid var(--rule-2)}
+.mp-cols li b{font-weight:500;overflow-wrap:anywhere}.mp-cols li .mono{color:var(--ink-2)}
+.mp-cols li.nw b,.mp-br b{text-decoration:underline;text-decoration-color:var(--brand);text-decoration-thickness:3px;text-underline-offset:4px}
+.mp-br{font-size:14px;margin-top:6px}.mp-br b{font-weight:700}
 </style>
 </head>
 <body>
@@ -283,6 +309,16 @@ body{font-size:16px}
     <h2 class="h2">AIへの指示の学び</h2>
     <p class="sub">言ったこと → 言えばよかったこと → AIが直したこと</p>
     <div class="cards" id="g-lessons"></div>
+  </section>
+
+  <section class="section" id="map" hidden>
+    <h2 class="h2">今週の地図</h2>
+    <p class="sub" id="mp-sub">作業・視聴者の反響・課題に出てきた言葉。丸の大きさは出てきた回数です。</p>
+    <p class="mp-leg" aria-hidden="true"><span><i class="k-w"></i>作業</span><span><i class="k-e"></i>反響</span><span><i class="k-i"></i>課題</span><span><i class="k-n"></i>黄の輪＝今週はじめて出た語</span><span><i class="k-b"></i>反響が作業に変わった所</span></p>
+    <div class="mp-box"><svg id="mp-svg" role="img" aria-labelledby="mp-desc"><desc id="mp-desc"></desc></svg></div>
+    <p class="small" id="mp-note"></p>
+    <div class="mp-cols" id="mp-cols"></div>
+    <div id="mp-brl"></div>
   </section>
 
   <section class="section" id="playlists">
@@ -489,6 +525,83 @@ body{font-size:16px}
   let pastLead=false, hireVis=false; const upd=()=>d.classList.toggle('on',pastLead&&!hireVis);
   new IntersectionObserver(e=>{pastLead=!e[0].isIntersecting&&e[0].boundingClientRect.top<0;upd();}).observe(lead);
   new IntersectionObserver(e=>{hireVis=e[0].isIntersecting;upd();},{threshold:.05}).observe(hire);
+})();
+</script>
+<script>
+// 地図M（W95・2026-09-27）— progress.json の map から描く。外部ライブラリなし・常時アニメなし。
+(function(){
+  const box=document.getElementById('mp-svg'); if(!box) return;
+  const NS='http://www.w3.org/2000/svg', FONT='700 12px "Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif';
+  const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const md=s=>(s||'').slice(5).replace('-','/').replace(/^0/,'').replace('/0','/');
+  let M=null, lastW=0; const cv=document.createElement('canvas').getContext('2d');
+  const tw=s=>{cv.font=FONT; return Math.ceil(cv.measureText(s).width);};
+  const el=(t,a,p)=>{const e=document.createElementNS(NS,t); for(const k in a) e.setAttribute(k,a[k]); if(p) p.appendChild(e); return e;};
+
+  function pack(nodes,maxW){ // 大きい順に、上から・中央寄りに空いた所へ置く（重ならない・幅を超えない）
+    const done=[], half=maxW/2;
+    nodes.slice().sort((a,b)=>b.F-a.F).forEach(d=>{
+      const xs=[0]; for(let x=4;x<=half-d.F;x+=4){xs.push(x,-x);}
+      for(let y=d.F;;y+=4){ const x=xs.find(x=>done.every(o=>Math.hypot(o.x-x,o.y-y)>=o.F+d.F+3));
+        if(x!==undefined||y>6000){d.x=x||0;d.y=y;break;} }
+      done.push(d);
+    });
+    if(!nodes.length) return {w:0,h:0};
+    const x0=Math.min(...nodes.map(d=>d.x-d.F)), x1=Math.max(...nodes.map(d=>d.x+d.F)), y0=Math.min(...nodes.map(d=>d.y-d.F)), y1=Math.max(...nodes.map(d=>d.y+d.F));
+    nodes.forEach(d=>{d.x-=(x0+x1)/2; d.y-=y0;}); return {w:x1-x0,h:y1-y0};
+  }
+
+  function draw(){
+    const W=box.parentNode.clientWidth; if(!M||!W) return; lastW=W;
+    while(box.lastChild&&box.lastChild.nodeName!=='desc') box.removeChild(box.lastChild);
+    const I=M.islands||{}, all=[].concat(I.work||[],I.echo||[],I.issue||[]), nmax=Math.max(1,...all.map(x=>x.n));
+    const mk=(arr,cls)=>(arr||[]).map(x=>{ const r=Math.round(11+27*Math.sqrt(x.n/nmax)), t=tw(x.w), inside=t+8<=2*r;
+      return {...x,cls,r,t,inside,F:(inside?r:Math.max(r+2,Math.hypot(t/2+2,r+18)))+(x.new?4:0)}; });
+    const G={work:mk(I.work,'w'),echo:mk(I.echo,'e'),issue:mk(I.issue,'i')};
+    const S=M.src||{};
+    const TT={work:['私の作業',`記録${S.work||0}件`],echo:['視聴者の反響',`コメント${S.comments||0}件・題名${S.titles||0}本`],issue:['課題',`期限切れ${S.overdue||0}・やめた${S.dropped||0}`]};
+    const PAD=10, TH=38, gap=10;
+    let side=W>=320, pos={};
+    if(side){ const wW=Math.floor((W-PAD*2-gap)*0.6), eW=W-PAD*2-gap-wW;
+      if(G.work.some(d=>2*d.F>wW)||G.echo.some(d=>2*d.F>eW)) side=false;
+      else { const a=pack(G.work,wW), b=pack(G.echo,eW), c=pack(G.issue,W-PAD*2), top=Math.max(a.h,b.h);
+        pos.work={x:PAD+wW/2,y:TH+6,h:a.h}; pos.echo={x:PAD+wW+gap+eW/2,y:TH+6,h:b.h};
+        pos.issue={x:W/2,y:TH+6+top+18+TH+6,h:c.h}; } }
+    if(!side){ let y=0; ['work','echo','issue'].forEach(k=>{ const p=pack(G[k],W-PAD*2); pos[k]={x:W/2,y:y+TH+6,h:p.h}; y+=TH+6+p.h+18; }); }
+    const H=Math.ceil(pos.issue.y+pos.issue.h+8);
+    box.setAttribute('viewBox',`0 0 ${W} ${H}`); box.setAttribute('width',W); box.setAttribute('height',H);
+    const gb=el('g',{},box), gn=el('g',{},box);
+    ['work','echo','issue'].forEach(k=>{ const p=pos[k];
+      el('text',{x:p.x,y:p.y-22,'text-anchor':'middle',class:'it'},gn).textContent=TT[k][0];
+      el('text',{x:p.x,y:p.y-6,'text-anchor':'middle',class:'is'},gn).textContent=TT[k][1];
+      if(!G[k].length){ const e=el('text',{x:p.x,y:p.y+14,'text-anchor':'middle',class:'out'},gn); e.textContent='（今週はなし）'; p.h=Math.max(p.h,24); }
+      G[k].forEach(d=>{ d.X=p.x+d.x; d.Y=p.y+d.y+(d.inside?0:0);
+        const g=el('g',{class:d.cls},gn); el('title',{},g).textContent=`${TT[k][0]}：${d.w}（${d.n}回）${d.new?'・今週はじめて':''}`;
+        if(d.new) el('circle',{cx:d.X,cy:d.Y,r:d.r+3.5,class:'ring'},g);
+        el('circle',{cx:d.X,cy:d.Y,r:d.r},g);
+        if(d.inside){ const t=el('text',{x:d.X,y:d.Y+4,'text-anchor':'middle',class:'in'},g); t.textContent=d.w; }
+        else { el('line',{x1:d.X,y1:d.Y+d.r,x2:d.X,y2:d.Y+d.r+5,class:'ld'},g);
+          const t=el('text',{x:d.X,y:d.Y+d.r+17,'text-anchor':'middle',class:'out'},g); t.textContent=d.w; } });
+    });
+    const find=(k,w)=>G[k].find(d=>d.w===w);
+    (M.bridges||[]).filter(b=>b.on).forEach(b=>{ const a=find('echo',b.from), z=find('work',b.to); if(!a||!z) return;
+      const mx=(a.X+z.X)/2, my=Math.min(a.Y,z.Y)-40; el('path',{d:`M${a.X},${a.Y} Q${mx},${my} ${z.X},${z.Y}`,class:'br'},gb); });
+    box.querySelector('desc').textContent=['work','echo','issue'].map(k=>TT[k][0]+'：'+G[k].map(d=>`${d.w}${d.n}回`).join('、')).join('。');
+  }
+
+  fetch('progress.json?'+Date.now()).then(r=>r.json()).then(p=>{
+    M=p.map; if(!M||!M.islands) return;
+    document.getElementById('map').hidden=false;
+    const S=M.src||{}, I=M.islands;
+    document.getElementById('mp-sub').textContent=`${md(M.from)}〜${md(M.as_of)}の7日間に、作業・視聴者の反響・課題に出てきた言葉。丸の大きさは出てきた回数です。`;
+    document.getElementById('mp-note').textContent=`作業＝決めたこと・やったことの記録${S.work||0}件。反響＝コメント${S.comments||0}件と、最後まで見られた割合が高い${S.titles||0}本の題名。課題＝期限切れ${S.overdue||0}件と、やめると決めた${S.dropped||0}件。反響の島が小さいのは、コメントがまだ少ないからです。大きく見せずに、そのまま出しています。週に1回、自動で描き直します。`;
+    const col=(h,arr)=>`<div><h3>${h}</h3><ul>${(arr||[]).map(x=>`<li${x.new?' class="nw"':''}><b>${esc(x.w)}</b><span class="mono">${x.n}</span></li>`).join('')||'<li><b>なし</b></li>'}</ul></div>`;
+    document.getElementById('mp-cols').innerHTML=col('作業',I.work)+col('反響',I.echo)+col('課題',I.issue);
+    const br=M.bridges||[];
+    document.getElementById('mp-brl').innerHTML=br.length?`<p class="small" style="margin-top:6px">反響が作業に変わった所</p>`+br.map(b=>`<p class="mp-br">「<b>${esc(b.from)}</b>」と言われて →「<b>${esc(b.to)}</b>」を変えた <span class="small mono">${md(b.date)}</span></p>`).join(''):'';
+    (document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(draw);
+  }).catch(()=>{});
+  window.addEventListener('resize',()=>{clearTimeout(window.__mpT); window.__mpT=setTimeout(()=>{ if(box.parentNode.clientWidth!==lastW) draw(); },250);});
 })();
 </script>
 <script src="d3.min.js"></script>
