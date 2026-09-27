@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AIニュースのその後｜Snapknow</title>
+<meta name="description" content="ショートで扱ったAIニュースの、その後の経過。毎晩AIが続報を探して書き足します。">
+<style>
+:root{--bg:#f7f6f2;--paper:#fffdf8;--ink:#0c1322;--ink-2:#5b6478;--ink-3:#7d879c;--rule:#dcd9d0;--brand:#f6c445;--brand-ink:#171207;--focus:#1f5fbf}
+@media (prefers-color-scheme:dark){:root{--bg:#14161b;--paper:#1b1e25;--ink:#eceef3;--ink-2:#aab2c3;--ink-3:#8a93a6;--rule:#2d323c}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP","Yu Gothic UI",Meiryo,system-ui,sans-serif;line-height:1.75}
+a{color:inherit}
+.wrap{max-width:760px;margin:0 auto;padding:24px 16px 64px}
+header .back{font-size:14px;color:var(--ink-2);text-decoration:none}
+h1{font-size:28px;margin:10px 0 4px;letter-spacing:.02em}
+.lead{color:var(--ink-2);margin:0 0 6px}
+.stamp{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;color:var(--ink-3)}
+.stamp.old{color:#b4462f}
+nav.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 8px}
+nav.chips a{font-size:14px;text-decoration:none;border:1px solid var(--rule);background:var(--paper);border-radius:99px;padding:4px 12px}
+section.topic{background:var(--paper);border:1px solid var(--rule);border-radius:14px;padding:18px 18px 8px;margin:18px 0;scroll-margin-top:12px}
+.topic h2{font-size:21px;margin:0 0 4px}
+.meta{font-size:13px;color:var(--ink-3);margin-bottom:8px}
+.sum{margin:0 0 12px}
+ol.tl{list-style:none;margin:0;padding:0 0 0 14px;border-left:2px solid var(--rule)}
+ol.tl li{position:relative;margin:0 0 14px;padding-left:10px}
+ol.tl li::before{content:"";position:absolute;left:-21px;top:9px;width:10px;height:10px;border-radius:50%;background:var(--brand);border:2px solid var(--paper)}
+ol.tl li.new::after{content:"新";position:absolute;left:-44px;top:2px;font-size:11px;background:var(--brand);color:var(--brand-ink);border-radius:4px;padding:0 4px}
+.d{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:13px;color:var(--ink-2)}
+.src{font-size:13px;color:var(--ink-3)}
+.src a{color:var(--ink-2)}
+.next{background:color-mix(in srgb,var(--brand) 16%,transparent);border-radius:10px;padding:10px 14px;margin:6px 0 12px;font-size:15px}
+.next b{display:block;font-size:13px}
+.next ul{margin:4px 0 0;padding-left:18px}
+.rel{font-size:14px;margin:0 0 12px}
+footer{font-size:13px;color:var(--ink-3);border-top:1px solid var(--rule);margin-top:28px;padding-top:14px}
+.cta{display:inline-block;margin:6px 8px 0 0;padding:8px 14px;border-radius:10px;background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:700;font-size:14px}
+section.graph{background:var(--paper);border:1px solid var(--rule);border-radius:14px;padding:12px 12px 6px;margin:14px 0}
+.gbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.gbar button{font:inherit;font-size:14px;font-weight:700;border:0;border-radius:10px;padding:6px 14px;background:var(--brand);color:var(--brand-ink);cursor:pointer}
+#gdate{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:20px;font-weight:700}
+svg#g{width:100%;height:380px;display:block;touch-action:none}
+svg#g .lk{stroke:var(--rule);stroke-width:1.6}
+svg#g .nd circle{stroke:var(--paper);stroke-width:2;cursor:pointer}
+svg#g .nd text{font-size:12px;fill:var(--ink-2);pointer-events:none;paint-order:stroke;stroke:var(--paper);stroke-width:3px}
+svg#g .nd.topic text{font-size:13px;font-weight:700;fill:var(--ink)}
+svg#g .nd.hide,svg#g .lk.hide{opacity:0}
+svg#g .nd,svg#g .lk{transition:opacity .5s}
+.gnote{font-size:13px;color:var(--ink-3);margin:4px 2px 6px}
+@media (max-width:560px){svg#g{height:320px}}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+</style></head>
+<body><div class="wrap">
+<header><a class="back" href="../">← Snapknow</a>
+<h1 id="title">AIニュースのその後</h1>
+<p class="lead" id="lead"></p>
+<div class="stamp" id="stamp"></div></header>
+<nav class="chips" id="chips" aria-label="話題"></nav>
+<section class="graph" id="graphbox" hidden><div class="gbar"><button id="play" type="button">▶ 育つ様子を再生</button><span id="gdate" aria-live="polite"></span></div>
+<svg id="g" role="img" aria-label="話題と、人・会社・用語のつながりの図"></svg>
+<p class="gnote">黄色＝追っている話題、灰色＝人・会社・用語。黄色の点を押すと、その話題の経過へ。</p></section>
+<main id="list"><p>読み込み中…</p></main>
+<footer>
+<p id="rules"></p>
+<p>このページの更新はAIに任せています（毎晩21:30ごろ）。まちがいに気づいたら、YouTubeのコメントで教えてください。</p>
+<a class="cta" href="../go/youtube.html">ショートを見る（YouTube）</a><a class="cta" href="../go/note.html">実録を読む（note）</a>
+</footer>
+</div>
+<script src="../d3.min.js"></script>
+<script>
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const safeUrl=u=>/^https:\/\//.test(u||'')?u:'';
+const ymd=s=>{const d=new Date(s);return isNaN(d)?'':d.toLocaleString('ja-JP',{timeZone:'Asia/Tokyo',year:'numeric',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})};
+
+function drawGraph(G){
+ if(!window.d3||!G||!G.nodes||!G.nodes.length)return;
+ const box=document.getElementById('graphbox');box.hidden=false;
+ const svg=d3.select('#g'),W=svg.node().clientWidth||700,H=svg.node().clientHeight||380;
+ svg.attr('viewBox',[0,0,W,H]);
+ const cs=getComputedStyle(document.documentElement),col=k=>k==='話題'?cs.getPropertyValue('--brand').trim():(k==='人・組織'?cs.getPropertyValue('--ink-2').trim():cs.getPropertyValue('--ink-3').trim());
+ const nodes=G.nodes.map(n=>({...n})),links=G.links.map(l=>({...l}));
+ const sim=d3.forceSimulation(nodes).force('link',d3.forceLink(links).id(d=>d.id).distance(l=>Math.min(90,W/5))).force('charge',d3.forceManyBody().strength(-340))
+  .force('center',d3.forceCenter(W/2,H/2)).force('x',d3.forceX(W/2).strength(.06)).force('y',d3.forceY(H/2).strength(.09)).force('col',d3.forceCollide(d=>d.kind==='話題'?46:22));
+ const lk=svg.append('g').selectAll('line').data(links).join('line').attr('class','lk');
+ const nd=svg.append('g').selectAll('g').data(nodes).join('g').attr('class',d=>'nd'+(d.kind==='話題'?' topic':''))
+  .call(d3.drag().on('start',(e,d)=>{if(!e.active)sim.alphaTarget(.3).restart();d.fx=d.x;d.fy=d.y}).on('drag',(e,d)=>{d.fx=e.x;d.fy=e.y}).on('end',(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null}))
+  .on('click',(e,d)=>{if(d.kind==='話題'){const el=document.getElementById(d.id);el&&el.scrollIntoView({behavior:'smooth'})}});
+ nd.append('circle').attr('r',d=>d.kind==='話題'?13:7).attr('fill',d=>col(d.kind));
+ nd.append('text').attr('x',d=>d.kind==='話題'?0:10).attr('y',d=>d.kind==='話題'?30:4).attr('text-anchor',d=>d.kind==='話題'?'middle':'start').text(d=>d.label.length>12?d.label.slice(0,11)+'…':d.label);
+ nd.append('title').text(d=>d.label+'（'+d.kind+'・初出 '+d.date+'）');
+ sim.on('tick',()=>{nodes.forEach(d=>{d.x=Math.max(46,Math.min(W-(d.kind==='話題'?46:84),d.x));d.y=Math.max(16,Math.min(H-36,d.y))});
+  lk.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);nd.attr('transform',d=>`translate(${d.x},${d.y})`)});
+ const dates=[...new Set(nodes.map(n=>n.date).concat(links.map(l=>l.date)))].filter(x=>x<'9999').sort();
+ const show=upto=>{nd.classed('hide',d=>d.date>upto);lk.classed('hide',d=>d.date>upto||d.source.date>upto||d.target.date>upto);
+  document.getElementById('gdate').textContent=upto>='9999'?'':upto.replace(/-/g,'/')};
+ let timer=null;const btn=document.getElementById('play');
+ btn.onclick=()=>{if(timer){clearInterval(timer);timer=null;show('9999');btn.textContent='▶ 育つ様子を再生';return}
+  let i=0;btn.textContent='■ 止める';show(dates[0]);sim.alpha(.5).restart();
+  timer=setInterval(()=>{i++;if(i>=dates.length){clearInterval(timer);timer=null;btn.textContent='▶ もう一度';setTimeout(()=>document.getElementById('gdate').textContent='',1500);return}show(dates[i]);sim.alpha(.35).restart()},900)};
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches)sim.alpha(1).tick(300);
+}
+fetch('data.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{
+ document.getElementById('lead').textContent=d.lead||'';
+ document.getElementById('rules').textContent=d.rules||'';
+ const st=document.getElementById('stamp'),age=(Date.now()-new Date(d.last_updated))/36e5;
+ st.textContent='最終更新 '+ymd(d.last_updated)+(age>36?'（更新が止まっています）':'');if(age>36)st.classList.add('old');
+ const byId=Object.fromEntries(d.topics.map(t=>[t.id,t]));
+ const lastE=t=>t.entries.reduce((m,e)=>e.date>m?e.date:m,'');const topics=[...d.topics].sort((a,b)=>lastE(b).localeCompare(lastE(a)));
+ document.getElementById('chips').innerHTML=topics.map(t=>`<a href="#${esc(t.id)}">${esc(t.title)}</a>`).join('');
+ const newest=Date.now()-72*36e5;
+ document.getElementById('list').innerHTML=topics.map(t=>{
+  const es=[...t.entries].sort((a,b)=>a.date.localeCompare(b.date));
+  const li=es.map(e=>{const isNew=new Date(e.date+'T00:00:00+09:00')>newest;
+   const src=(e.src||[]).map(s=>safeUrl(s.url)?`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`:esc(s.name)).join('／');
+   return `<li class="${isNew?'new':''}"><span class="d">${esc(e.date)}</span><br>${esc(e.text)}<br><span class="src">出典：${src}</span></li>`}).join('');
+  const nx=(t.next||[]).length?`<div class="next"><b>次に見ていること</b><ul>${t.next.map(n=>`<li>${esc(n)}</li>`).join('')}</ul></div>`:'';
+  const rel=(t.related||[]).filter(r=>byId[r]).map(r=>`<a href="#${esc(r)}">${esc(byId[r].title)}</a>`).join('、');
+  return `<section class="topic" id="${esc(t.id)}"><h2>${esc(t.title)}</h2>
+   <div class="meta">${t.status==='closed'?'追跡終了':'追跡中'}・更新 ${ymd(t.updated_at)}・${t.entries.length}件</div>
+   <p class="sum">${esc(t.summary)}</p>${nx}<ol class="tl">${li}</ol>${rel?`<p class="rel">つながる話：${rel}</p>`:''}</section>`}).join('');
+ drawGraph(d.graph);
+ if(location.hash){const el=document.querySelector(location.hash);el&&el.scrollIntoView()}
+}).catch(()=>{document.getElementById('list').innerHTML='<p>読み込めませんでした。時間をおいて開き直してください。</p>'});
+</script>
+</body></html>
