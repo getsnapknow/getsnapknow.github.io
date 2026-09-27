@@ -790,5 +790,168 @@
   "youtube": 0
  },
  "hp_since": "2026-09-25",
- "hp_as_of": "2026-09-27 06:15"
+ "hp_as_of": "2026-09-27 06:15",
+ "map": {
+  "as_of": "2026-09-27",
+  "from": "2026-09-21",
+  "islands": {
+   "work": [
+    {
+     "w": "HP",
+     "n": 39,
+     "new": false
+    },
+    {
+     "w": "受信箱",
+     "n": 34,
+     "new": false
+    },
+    {
+     "w": "Instagram",
+     "n": 29,
+     "new": false
+    },
+    {
+     "w": "営業",
+     "n": 29,
+     "new": false
+    },
+    {
+     "w": "検査",
+     "n": 28,
+     "new": false
+    },
+    {
+     "w": "YouTube",
+     "n": 25,
+     "new": true
+    },
+    {
+     "w": "LINE",
+     "n": 24,
+     "new": false
+    },
+    {
+     "w": "台本",
+     "n": 23,
+     "new": false
+    },
+    {
+     "w": "ココナラ",
+     "n": 20,
+     "new": false
+    },
+    {
+     "w": "冒頭2秒",
+     "n": 19,
+     "new": false
+    },
+    {
+     "w": "BGM",
+     "n": 2,
+     "new": true
+    },
+    {
+     "w": "実物の画面",
+     "n": 1,
+     "new": true
+    }
+   ],
+   "echo": [
+    {
+     "w": "BGM",
+     "n": 1,
+     "new": true
+    },
+    {
+     "w": "つかみ",
+     "n": 1,
+     "new": true
+    },
+    {
+     "w": "タイトル",
+     "n": 1,
+     "new": true
+    },
+    {
+     "w": "品質",
+     "n": 1,
+     "new": true
+    },
+    {
+     "w": "声",
+     "n": 1,
+     "new": true
+    },
+    {
+     "w": "字幕",
+     "n": 1,
+     "new": false
+    },
+    {
+     "w": "楽しさ",
+     "n": 1,
+     "new": true
+    },
+    {
+     "w": "登録者",
+     "n": 1,
+     "new": true
+    }
+   ],
+   "issue": [
+    {
+     "w": "Instagram",
+     "n": 2,
+     "new": true
+    },
+    {
+     "w": "冒頭2秒",
+     "n": 2,
+     "new": true
+    },
+    {
+     "w": "動く図",
+     "n": 2,
+     "new": true
+    },
+    {
+     "w": "営業",
+     "n": 2,
+     "new": false
+    },
+    {
+     "w": "60分相談",
+     "n": 1,
+     "new": true
+    },
+    {
+     "w": "LINE",
+     "n": 1,
+     "new": true
+    }
+   ]
+  },
+  "bridges": [
+   {
+    "from": "BGM",
+    "to": "BGM",
+    "date": "2026-09-22",
+    "on": true
+   },
+   {
+    "from": "文字だけ",
+    "to": "実物の画面",
+    "date": "2026-09-22",
+    "on": false
+   }
+  ],
+  "src": {
+   "work": 203,
+   "comments": 4,
+   "titles": 5,
+   "overdue": 0,
+   "dropped": 9
+  }
+ }
 }
