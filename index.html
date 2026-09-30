@@ -241,6 +241,12 @@ body{font-size:16px}
 .mp-cols li b{font-weight:500;overflow-wrap:anywhere}.mp-cols li .mono{color:var(--ink-2)}
 .mp-cols li.nw b,.mp-br b{text-decoration:underline;text-decoration-color:var(--brand);text-decoration-thickness:3px;text-underline-offset:4px}
 .mp-br{font-size:14px;margin-top:6px}.mp-br b{font-weight:700}
+.cast{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cast figure{margin:0;background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:12px 10px;text-align:center}
+.cast img{width:100%;max-width:120px;height:auto;display:block;margin:0 auto 6px}
+.cast b{display:block;font-size:15px}.cast .small{display:block;color:var(--ink-3);font-size:12px;margin-bottom:4px}
+.cast p{margin:0;font-size:13px;line-height:1.6;text-align:left}
+@media (max-width:520px){.cast{grid-template-columns:1fr}.cast figure{display:grid;grid-template-columns:88px 1fr;gap:12px;text-align:left;align-items:center}.cast img{margin:0}}
 </style>
 </head>
 <body>
@@ -395,6 +401,16 @@ body{font-size:16px}
       <li><strong>ナレーションは自分の声です。</strong>2026年9月2日から、合成音声をやめて自分で読んでいます（それ以前の動画は合成音声です）。</li>
       <li><strong>出典は必ず元をたどります。</strong>読み間違いと誤字は、機械で検査してから出しています。見つけたら教えてください。</li>
     </ul>
+  </section>
+
+  <!-- ===== 登場するキャラ ===== -->
+  <section class="section" id="cast" style="margin-top:48px">
+    <h2 class="h2">登場するキャラ</h2>
+    <div class="cast">
+      <figure><img src="chara/snap.png" alt="ヒヨコの体をした会社員のキャラ「Snap」" loading="lazy" width="320" height="320"><div><b>Snap</b><span class="small">ヒヨコ・中の人</span><p>AIも副業もまだ「ひよっこ」の会社員。このチャンネルをやっている本人です。声も本人の生声。</p></div></figure>
+      <figure><img src="chara/boss.png" alt="メガネをかけたシロクマのキャラ「ボス」" loading="lazy" width="320" height="320"><div><b>ボス</b><span class="small">シロクマ・真面目なAI</span><p>数字と失敗を、淡々と報告する係。週1本の本編に出てきます（声はAI音声）。</p></div></figure>
+      <figure><img src="chara/yume.png" alt="星のアンテナをつけたヒツジのキャラ「ゆめちゃん」" loading="lazy" width="320" height="320"><div><b>ゆめちゃん</b><span class="small">ヒツジ・夢見がちなAI</span><p>すぐ大きな話を言い出す係。週1本の本編に出てきます（声はAI音声）。</p></div></figure>
+    </div>
   </section>
 
   <!-- ===== よくある質問 ===== -->
