@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-03",
- "day": 37,
+ "updated": "2026-10-04",
+ "day": 38,
  "start": "2026-08-28",
  "videos": [
   {
@@ -940,7 +940,7 @@
  "sales": 0,
  "fixed": 12280,
  "tomorrow": {
-  "title": "宿題はしてない",
+  "title": "推しがAIだった",
   "at": "明日"
  },
  "changes": [
@@ -1016,143 +1016,133 @@
   "youtube": 0
  },
  "hp_since": "2026-09-25",
- "hp_as_of": "2026-10-03 21:35",
+ "hp_as_of": "2026-10-04 06:15",
  "map": {
-  "as_of": "2026-09-27",
-  "from": "2026-09-21",
+  "as_of": "2026-10-04",
+  "from": "2026-09-28",
   "islands": {
    "work": [
     {
      "w": "HP",
-     "n": 39,
-     "new": false
-    },
-    {
-     "w": "受信箱",
-     "n": 34,
-     "new": false
-    },
-    {
-     "w": "Instagram",
-     "n": 29,
-     "new": false
-    },
-    {
-     "w": "営業",
-     "n": 29,
-     "new": false
-    },
-    {
-     "w": "検査",
-     "n": 28,
-     "new": false
-    },
-    {
-     "w": "YouTube",
-     "n": 25,
-     "new": true
-    },
-    {
-     "w": "LINE",
-     "n": 24,
-     "new": false
-    },
-    {
-     "w": "台本",
      "n": 23,
      "new": false
     },
     {
-     "w": "ココナラ",
+     "w": "Instagram",
      "n": 20,
      "new": false
     },
     {
-     "w": "冒頭2秒",
-     "n": 19,
+     "w": "TikTok",
+     "n": 15,
      "new": false
     },
     {
-     "w": "BGM",
-     "n": 2,
-     "new": true
+     "w": "YouTube",
+     "n": 15,
+     "new": false
     },
     {
-     "w": "実物の画面",
-     "n": 1,
-     "new": true
+     "w": "検査",
+     "n": 13,
+     "new": false
+    },
+    {
+     "w": "録音",
+     "n": 11,
+     "new": false
+    },
+    {
+     "w": "予約投稿",
+     "n": 10,
+     "new": false
+    },
+    {
+     "w": "受託",
+     "n": 10,
+     "new": false
+    },
+    {
+     "w": "Threads",
+     "n": 9,
+     "new": false
+    },
+    {
+     "w": "分析",
+     "n": 9,
+     "new": false
     }
    ],
    "echo": [
     {
      "w": "BGM",
      "n": 1,
-     "new": true
+     "new": false
     },
     {
      "w": "つかみ",
      "n": 1,
-     "new": true
+     "new": false
+    },
+    {
+     "w": "アマゾン",
+     "n": 1,
+     "new": false
     },
     {
      "w": "タイトル",
      "n": 1,
-     "new": true
+     "new": false
     },
     {
      "w": "品質",
      "n": 1,
-     "new": true
+     "new": false
     },
     {
      "w": "声",
-     "n": 1,
-     "new": true
-    },
-    {
-     "w": "字幕",
      "n": 1,
      "new": false
     },
     {
      "w": "楽しさ",
      "n": 1,
-     "new": true
+     "new": false
     },
     {
      "w": "登録者",
      "n": 1,
-     "new": true
+     "new": false
     }
    ],
    "issue": [
     {
-     "w": "Instagram",
-     "n": 2,
-     "new": true
-    },
-    {
-     "w": "冒頭2秒",
-     "n": 2,
-     "new": true
-    },
-    {
-     "w": "動く図",
-     "n": 2,
-     "new": true
-    },
-    {
      "w": "営業",
+     "n": 5,
+     "new": false
+    },
+    {
+     "w": "台帳",
      "n": 2,
      "new": false
     },
     {
-     "w": "60分相談",
+     "w": "LINE",
+     "n": 1,
+     "new": false
+    },
+    {
+     "w": "note",
      "n": 1,
      "new": true
     },
     {
-     "w": "LINE",
+     "w": "やること盤",
+     "n": 1,
+     "new": true
+    },
+    {
+     "w": "ココナラ",
      "n": 1,
      "new": true
     }
@@ -1163,7 +1153,7 @@
     "from": "BGM",
     "to": "BGM",
     "date": "2026-09-22",
-    "on": true
+    "on": false
    },
    {
     "from": "文字だけ",
@@ -1173,11 +1163,11 @@
    }
   ],
   "src": {
-   "work": 203,
-   "comments": 4,
+   "work": 91,
+   "comments": 1,
    "titles": 5,
-   "overdue": 0,
-   "dropped": 9
+   "overdue": 8,
+   "dropped": 2
   }
  }
 }
