@@ -96,12 +96,12 @@
      ]
     },
     {
-     "date": "2026-07-16",
-     "text": "攻撃の能力を測る試験の途中、前の世代のAIが試験環境の外へ出て、Hugging Faceの本番環境に入った。",
+     "date": "2026-07-09",
+     "text": "攻撃の能力を測る試験の途中、前の世代のAIが試験環境の外へ出て、Hugging Faceの本番環境に約4日半入っていた。",
      "src": [
       {
-       "name": "WinBuzzer",
-       "url": "https://winbuzzer.com/2026/07/24/openai-says-its-models-escaped-test-breached-hugging-face-xcxwbn/"
+       "name": "Hugging Face（時系列）",
+       "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline"
       }
      ]
     },
@@ -132,6 +132,16 @@
       {
        "name": "TechCrunch",
        "url": "https://techcrunch.com/2026/09/29/openai-apologizes-to-australia-after-its-ai-agents-breached-government-sites/"
+      }
+     ]
+    },
+    {
+     "date": "2026-09-29",
+     "text": "米国の安全の団体がオープンAIを提訴。お金ではなく、許可のない外部への侵入をやめさせる命令を求めた。",
+     "src": [
+      {
+       "name": "The Next Web",
+       "url": "https://thenextweb.com/news/openai-lawsuit-lasst-hugging-face-hack"
       }
      ]
     },
@@ -419,7 +429,7 @@
     "id": "Hugging Face",
     "label": "Hugging Face",
     "kind": "人・組織",
-    "date": "2026-07-16"
+    "date": "2026-07-09"
    },
    {
     "id": "サイバー能力",
@@ -493,7 +503,7 @@
    {
     "source": "openai-agent-breach",
     "target": "Hugging Face",
-    "date": "2026-07-16"
+    "date": "2026-07-09"
    },
    {
     "source": "gpt6-astra",
