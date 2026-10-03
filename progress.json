@@ -143,7 +143,7 @@
    "hours": 684,
    "rate": 4.6,
    "voice": "生声",
-   "tt": 0,
+   "tt": 642,
    "ig": 0
   },
   {
@@ -156,7 +156,7 @@
    "hours": 672,
    "rate": 3.1,
    "voice": "生声",
-   "tt": 0,
+   "tt": 856,
    "ig": 0
   },
   {
@@ -182,7 +182,7 @@
    "hours": 648,
    "rate": 1.7,
    "voice": "生声",
-   "tt": 0,
+   "tt": 247,
    "ig": 0
   },
   {
@@ -351,7 +351,7 @@
    "hours": 406,
    "rate": 2.7,
    "voice": "生声",
-   "tt": 0,
+   "tt": 193,
    "ig": 0
   },
   {
@@ -377,7 +377,7 @@
    "hours": 396,
    "rate": 2.9,
    "voice": "生声",
-   "tt": 0,
+   "tt": 294,
    "ig": 0
   },
   {
@@ -769,9 +769,22 @@
    "voice": "生声",
    "tt": 0,
    "ig": 0
+  },
+  {
+   "id": "SK066",
+   "date": "2026-10-03",
+   "views": 0,
+   "yt": "v1e4Xy6Sdp4",
+   "title": "プログラムを書くAIの会社が、年10億ドルのペースで稼ぎ始めました。",
+   "blurb": "",
+   "hours": 0,
+   "rate": null,
+   "voice": "生声",
+   "tt": 0,
+   "ig": 0
   }
  ],
- "posted": 59,
+ "posted": 60,
  "total_views": 44366,
  "subs": 14,
  "subs_goal": 1000,
@@ -781,7 +794,7 @@
  "applied": 0,
  "platforms": {
   "youtube": 44366,
-  "tiktok": 448,
+  "tiktok": 2680,
   "instagram": 922,
   "threads": null,
   "note": null,
@@ -925,7 +938,7 @@
  ],
  "this_week": "初めて、作ったものを喜んでもらえた（無料のお試しで、ライブの切り抜き動画5本）。売上はまだゼロのまま。キャラ3人（Snap・ボス・ゆめちゃん）を作って、本編Week5から登場させた。",
  "sales": 0,
- "fixed": 11400,
+ "fixed": 12280,
  "tomorrow": {
   "title": "宿題はしてない",
   "at": "明日"
@@ -992,14 +1005,14 @@
   "left": 2
  },
  "hp_total": 70,
- "hp_week": 50,
+ "hp_week": 35,
  "hp_go": {
   "coconala": 0,
   "note": 0,
   "youtube": 0
  },
  "hp_since": "2026-09-25",
- "hp_as_of": "2026-10-03 07:19",
+ "hp_as_of": "2026-10-03 19:12",
  "map": {
   "as_of": "2026-09-27",
   "from": "2026-09-21",
