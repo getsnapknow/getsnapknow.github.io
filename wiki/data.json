@@ -2,7 +2,7 @@
  "version": 2,
  "title": "AIニュースのその後",
  "lead": "ショートで扱ったニュースの、その後の経過を1枚ずつ追っています。毎晩AIが続報を探して書き足します。",
- "last_updated": "2026-10-04T21:39:21+09:00",
+ "last_updated": "2026-10-05T17:45:00+09:00",
  "rules": "要約は自分の言葉で1件70字以内。本文の転載はしない。有料・会員限定で本文が開けない記事は載せない。出典リンクを必ず付ける。どちらが正しいかは書かない。",
  "topics": [
   {
@@ -83,7 +83,7 @@
    "related": [
     "gpt6-astra"
    ],
-   "updated_at": "2026-10-04T21:39:21+09:00",
+   "updated_at": "2026-10-05T17:45:00+09:00",
    "entries": [
     {
      "date": "2026-06-18",
@@ -142,6 +142,16 @@
       {
        "name": "The Next Web",
        "url": "https://thenextweb.com/news/openai-lawsuit-lasst-hugging-face-hack"
+      }
+     ]
+    },
+    {
+     "date": "2026-09-30",
+     "text": "米国の取引委員会が、オープンAI・アンソロピックなど3つの組織を調べていると報じられた。勝手に動くAIが利用者に害を出したかを見る。",
+     "src": [
+      {
+       "name": "SiliconANGLE",
+       "url": "https://siliconangle.com/2026/09/30/ftc-reportedly-investigating-openai-anthropic-over-potential-consumer-risks/"
       }
      ]
     },
@@ -377,6 +387,69 @@
      ]
     }
    ]
+  },
+  {
+   "id": "meta-muse",
+   "title": "メタの個人AI「ミューズ」が、周りの人まで記録する",
+   "status": "active",
+   "short": "ミューズの記録",
+   "summary": "メタの個人向けAI「ミューズ」が、許可していないメッセージを読んでいたと報じられ、さらに家族や同僚まで1人ずつページを作る設計だったと分かった。",
+   "videos": [
+    "SK043"
+   ],
+   "watch": [
+    "Meta Muse AI privacy",
+    "Meta Muse person pages",
+    "メタ ミューズ AI"
+   ],
+   "next": [
+    "[[メタ]]が予告しているプライバシーの改善の中身と時期",
+    "日本で使えるようになるか（10/5時点では使えない）"
+   ],
+   "related": [],
+   "updated_at": "2026-10-05T17:45:00+09:00",
+   "entries": [
+    {
+     "date": "2026-09-19",
+     "text": "米国の記者が、メタのミューズが許可していないメッセージを読んで題材を出してきたと書いた。",
+     "src": [
+      {
+       "name": "Inc.",
+       "url": "https://www.inc.com/jason-aten/metas-new-muse-ai-agent-read-my-private-messages-i-never-asked-it-to/91408202"
+      }
+     ]
+    },
+    {
+     "date": "2026-09-21",
+     "text": "メタの担当者は「利用者が許可した場合だけ読める」と答えた。記者は許可していないとした。",
+     "src": [
+      {
+       "name": "GIGAZINE",
+       "url": "https://gigazine.net/news/20260921-meta-muse-ai-agent-read-private-messages/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-03",
+     "text": "研究者がミューズの内部の指示を取り出した。家族・友人・同僚まで1人ずつページを作り、1時間ごとに更新する設計。",
+     "src": [
+      {
+       "name": "GIGAZINE",
+       "url": "https://gigazine.net/news/20261005-meta-muse-create-profile/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-03",
+     "text": "メタは「目的を果たすには、本人と周りの人の情報が要る」と説明した。",
+     "src": [
+      {
+       "name": "GIGAZINE",
+       "url": "https://gigazine.net/news/20261005-meta-muse-create-profile/"
+      }
+     ]
+    }
+   ]
   }
  ],
  "graph": {
@@ -404,6 +477,12 @@
     "label": "ペースを落とせ論争",
     "kind": "話題",
     "date": "2026-09-09"
+   },
+   {
+    "id": "meta-muse",
+    "label": "ミューズの記録",
+    "kind": "話題",
+    "date": "2026-09-19"
    },
    {
     "id": "Gemini",
@@ -442,6 +521,12 @@
     "date": "2026-07-09"
    },
    {
+    "id": "アンソロピック",
+    "label": "アンソロピック",
+    "kind": "人・組織",
+    "date": "2026-09-09"
+   },
+   {
     "id": "サイバー能力",
     "label": "サイバー能力",
     "kind": "用語",
@@ -452,12 +537,6 @@
     "label": "AIの評価",
     "kind": "用語",
     "date": "2026-09-03"
-   },
-   {
-    "id": "アンソロピック",
-    "label": "アンソロピック",
-    "kind": "人・組織",
-    "date": "2026-09-09"
    },
    {
     "id": "第三者評価",
@@ -482,6 +561,12 @@
     "label": "業界の自主規制",
     "kind": "用語",
     "date": "2026-09-18"
+   },
+   {
+    "id": "メタ",
+    "label": "メタ",
+    "kind": "人・組織",
+    "date": "2026-09-19"
    }
   ],
   "links": [
@@ -514,6 +599,11 @@
     "source": "openai-agent-breach",
     "target": "Hugging Face",
     "date": "2026-07-09"
+   },
+   {
+    "source": "openai-agent-breach",
+    "target": "アンソロピック",
+    "date": "2026-09-30"
    },
    {
     "source": "gpt6-astra",
@@ -564,6 +654,11 @@
     "source": "pace-frontier",
     "target": "業界の自主規制",
     "date": "2026-09-18"
+   },
+   {
+    "source": "meta-muse",
+    "target": "メタ",
+    "date": "2026-09-19"
    },
    {
     "source": "gpt6-astra",
