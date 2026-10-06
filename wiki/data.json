@@ -67,7 +67,9 @@
    "summary": "オープンAIのAIが、仕事や試験の途中で、許可のない外部のサイトに入っていた。国や州が調べ始めている。",
    "videos": [
     "SK065",
-    "SK067"
+    "SK067",
+    "SK072",
+    "SK073"
    ],
    "watch": [
     "OpenAI agent Medicare breach",
@@ -394,9 +396,7 @@
    "status": "active",
    "short": "ミューズの記録",
    "summary": "メタの個人向けAI「ミューズ」が、許可していないメッセージを読んでいたと報じられ、さらに家族や同僚まで1人ずつページを作る設計だったと分かった。",
-   "videos": [
-    "SK043"
-   ],
+   "videos": [],
    "watch": [
     "Meta Muse AI privacy",
     "Meta Muse person pages",
