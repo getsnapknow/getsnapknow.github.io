@@ -2,7 +2,7 @@
  "version": 2,
  "title": "AIニュースのその後",
  "lead": "ショートで扱ったニュースの、その後の経過を1枚ずつ追っています。毎晩AIが続報を探して書き足します。",
- "last_updated": "2026-10-12T21:38:00+09:00",
+ "last_updated": "2026-10-13T21:39:00+09:00",
  "rules": "要約は自分の言葉で1件70字以内。本文の転載はしない。有料・会員限定で本文が開けない記事は載せない。出典リンクを必ず付ける。どちらが正しいかは書かない。",
  "topics": [
   {
@@ -25,7 +25,7 @@
     "同じ種類の事故が出るか"
    ],
    "related": [],
-   "updated_at": "2026-10-12T21:38:00+09:00",
+   "updated_at": "2026-10-13T21:39:00+09:00",
    "entries": [
     {
      "date": "2026-08-30",
@@ -86,7 +86,7 @@
    "related": [
     "gpt6-astra"
    ],
-   "updated_at": "2026-10-12T21:38:00+09:00",
+   "updated_at": "2026-10-13T21:39:00+09:00",
    "entries": [
     {
      "date": "2026-06-18",
@@ -187,6 +187,16 @@
        "url": "https://gigazine.net/news/20261007-openai-rogue-agent/"
       }
      ]
+    },
+    {
+     "date": "2026-09-09",
+     "text": "米上院のホーリー議員がオープンAIに書簡を送り、Hugging Faceの件の調査を開始。10月1日までに16の質問へ答えるよう求めた。",
+     "src": [
+      {
+       "name": "BetaNews",
+       "url": "https://betanews.com/article/hawley-openai-hugging-face-senate-probe/"
+      }
+     ]
     }
    ]
   },
@@ -214,7 +224,7 @@
     "pace-frontier",
     "openai-agent-breach"
    ],
-   "updated_at": "2026-10-12T21:38:00+09:00",
+   "updated_at": "2026-10-13T21:39:00+09:00",
    "entries": [
     {
      "date": "2026-09-03",
@@ -313,7 +323,7 @@
    "related": [
     "gpt6-astra"
    ],
-   "updated_at": "2026-10-12T21:38:00+09:00",
+   "updated_at": "2026-10-13T21:39:00+09:00",
    "entries": [
     {
      "date": "2026-09-09",
@@ -418,7 +428,7 @@
     "日本で使えるようになるか（10/5時点では使えない）"
    ],
    "related": [],
-   "updated_at": "2026-10-12T21:38:00+09:00",
+   "updated_at": "2026-10-13T21:39:00+09:00",
    "entries": [
     {
      "date": "2026-09-08",
@@ -467,6 +477,16 @@
       {
        "name": "GIGAZINE",
        "url": "https://gigazine.net/news/20261005-meta-muse-create-profile/"
+      }
+     ]
+    },
+    {
+     "date": "2026-09-08",
+     "text": "メタがミューズの保護策を説明。利用者ごとに分けた環境で動かし、学習への利用は初期設定で拒否、年内に鍵を本人が持つ暗号化版も試すとした。",
+     "src": [
+      {
+       "name": "Crypto Briefing",
+       "url": "https://cryptobriefing.com/meta-muse-ai-privacy-features/"
       }
      ]
     }
