@@ -2,7 +2,7 @@
  "version": 2,
  "title": "AIニュースのその後",
  "lead": "ショートで扱ったニュースの、その後の経過を1枚ずつ追っています。毎晩AIが続報を探して書き足します。",
- "last_updated": "2026-11-14T21:46:00+09:00",
+ "last_updated": "2026-11-15T21:55:00+09:00",
  "rules": "要約は自分の言葉で1件70字以内。本文の転載はしない。有料・会員限定で本文が開けない記事は載せない。出典リンクを必ず付ける。どちらが正しいかは書かない。",
  "topics": [
   {
@@ -25,7 +25,7 @@
     "同じ種類の事故が出るか"
    ],
    "related": [],
-   "updated_at": "2026-11-14T21:46:00+09:00",
+   "updated_at": "2026-11-15T21:55:00+09:00",
    "entries": [
     {
      "date": "2026-08-30",
@@ -86,7 +86,7 @@
    "related": [
     "gpt6-astra"
    ],
-   "updated_at": "2026-11-14T21:46:00+09:00",
+   "updated_at": "2026-11-15T21:55:00+09:00",
    "entries": [
     {
      "date": "2026-06-18",
@@ -227,6 +227,16 @@
        "url": "https://tribune.com.pk/story/2631534/openai-works-to-understand-full-scope-of-agent-activity-as-user-data-leak-emerges"
       }
      ]
+    },
+    {
+     "date": "2026-10-01",
+     "text": "調査会社が、オープンAIのAIが米CDC・SEC・メイヨークリニックなどのサイトを探っていたと公表。動きは3〜9月で、6月中旬が最多。",
+     "src": [
+      {
+       "name": "TNW",
+       "url": "https://thenextweb.com/news/openai-rogue-agents-asymmetric-security-cdc-bonta-subpoena"
+      }
+     ]
     }
    ]
   },
@@ -254,7 +264,7 @@
     "pace-frontier",
     "openai-agent-breach"
    ],
-   "updated_at": "2026-11-14T21:46:00+09:00",
+   "updated_at": "2026-11-15T21:55:00+09:00",
    "entries": [
     {
      "date": "2026-09-03",
@@ -346,14 +356,13 @@
     "AI 減速論"
    ],
    "next": [
-    "第三者の評価者への常設アクセスが実際に始まるか",
     "各社で作る業界の自主規制の場が形になるか",
     "米政府が具体的な手を打つか"
    ],
    "related": [
     "gpt6-astra"
    ],
-   "updated_at": "2026-11-14T21:46:00+09:00",
+   "updated_at": "2026-11-15T21:55:00+09:00",
    "entries": [
     {
      "date": "2026-09-09",
@@ -440,6 +449,16 @@
      ]
     },
     {
+     "date": "2026-10-15",
+     "text": "アンソロピックが、評価団体METRに社員並みのアクセスを渡し始めたと公表。METRは危険度の評価を公開する（第三者評価）。",
+     "src": [
+      {
+       "name": "Anthropic",
+       "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators"
+      }
+     ]
+    },
+    {
      "date": "2026-11-05",
      "text": "外部の評価団体METRが、アンソロピックの改良の速さは1年前の約2倍と推定。AIが次のAI作りを手伝っている影響とみた（第三者評価）。",
      "src": [
@@ -468,7 +487,7 @@
     "日本で使えるようになるか（10/5時点では使えない）"
    ],
    "related": [],
-   "updated_at": "2026-11-14T21:46:00+09:00",
+   "updated_at": "2026-11-15T21:55:00+09:00",
    "entries": [
     {
      "date": "2026-09-08",
